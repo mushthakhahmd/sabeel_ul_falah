@@ -2,12 +2,12 @@ import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:sabeel/about_us.dart';
 import 'package:sabeel/constant.dart';
 import 'package:sabeel/counter.dart';
 import 'package:sabeel/db/db_function.dart';
 import 'package:sabeel/model/item_model.dart';
 import 'package:sabeel/views/pdf_view.dart';
+import 'package:sabeel/widgets/drawer_widget.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sabeel/items.dart';
@@ -25,6 +25,7 @@ class _home_pageState extends State<home_page> {
   @override
   Widget build(BuildContext context) {
     DateTime? clickTime;
+    // ignore: deprecated_member_use
     return WillPopScope(
       onWillPop: () {
         if (_currentIndex == 0) {
@@ -52,102 +53,7 @@ class _home_pageState extends State<home_page> {
       child: SafeArea(
         child: Scaffold(
           backgroundColor: Colors.grey.shade200,
-          drawer: Drawer(
-            child: Container(
-              child: ListView(
-                children: [
-                  SizedBox(
-                    height: 25,
-                  ),
-                  ListTile(
-                      leading: Icon(
-                        Icons.home,
-                        color: Color(0xff1D438A),
-                      ),
-                      title: Text(
-                        "Home",
-                        style: TextStyle(fontWeight: FontWeight.w500),
-                      ),
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const home_page()));
-                      }),
-                  Divider(
-                    color: Colors.black26,
-                  ),
-                  ListTile(
-                      leading: Icon(
-                        Icons.account_circle_rounded,
-                        color: Color(0xff1D438A),
-                      ),
-                      title: Text(
-                        "About Us",
-                        style: TextStyle(fontWeight: FontWeight.w500),
-                      ),
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const about_us()));
-                      }),
-                  // Divider(
-                  //   color: Colors.black26,
-                  // ),
-                  // ListTile(
-                  //   leading: Icon(
-                  //     Icons.category,
-                  //     color: Color(0xff1D438A),
-                  //   ),
-                  //   title: Text(
-                  //     "Category",
-                  //     style: TextStyle(fontWeight: FontWeight.w500),
-                  //   ),
-                  // ),
-                  // Divider(
-                  //   color: Colors.black26,
-                  // ),
-                  // ListTile(
-                  //   leading: Icon(
-                  //     Icons.assistant_navigation,
-                  //     color: Color(0xff1D438A),
-                  //   ),
-                  //   title: Text(
-                  //     "Qibla Finder",
-                  //     style: TextStyle(fontWeight: FontWeight.w500),
-                  //   ),
-                  // ),
-                  Divider(
-                    color: Colors.black26,
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.notifications_none,
-                      color: Color(0xff1D438A),
-                    ),
-                    title: Text(
-                      "Notifications",
-                      style: TextStyle(fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                  Divider(
-                    color: Colors.black26,
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.share,
-                      color: Color(0xff1D438A),
-                    ),
-                    title: Text(
-                      "Share",
-                      style: TextStyle(fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+          drawer: DrawarWidget(),
           body: [
             CustomScrollView(
               scrollDirection: Axis.vertical,

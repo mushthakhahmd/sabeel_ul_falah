@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_use_of_protected_member, invalid_use_of_visible_for_testing_member
+
 import 'package:flutter/foundation.dart';
 import 'package:sabeel/model/item_model.dart';
 import 'package:sqflite/sqflite.dart';
@@ -87,10 +89,10 @@ Future<void> insertIntoTable() async {
         '(18,2, "Wird-ul-Imam Nawawi", "ورد الإمام النووي","false", "assets/pdf/02 Wird-ul-Imam Nawawi.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(21,2, "Luha Prayer", "صلاة الضحى", "false", "assets/pdf/04 Luha prayer.pdf")');
+        '(21,2, "Luha Prayer", "صلاة الضحى", "false", "assets/pdf/04 Luha prayer.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(22,2, "Zikr and Dua after Luha", "الأذكار والدعاء بعد صلاة الضحى", "false", "assets/pdf/04 Zikr and Dua after Luha.pdf")');
+        '(22,2, "Zikr and Dua after Luha", "الأذكار والدعاء بعد صلاة الضحى", "false", "assets/pdf/04 Zikr and Dua after Luha.pdf")');
 
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
@@ -199,23 +201,22 @@ Future<void> insertIntoTable() async {
 
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(4,10, "Dua of Asma-Ul-Husna", "دعاء أسماء الله الحسنى", "false", "assets/pdf/01 Dua of Asma-ul-Husna.pdf")');
+        '(4,10, "Dua of Asma-Ul-Husna", "دعاء أسماء الله الحسنى", "false", "assets/pdf/01 Dua of Asma-ul-Husna.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(144,10, "Names of prophet Muhammed (s)", "أسماء النبي (ص)", "false","assets/pdf/13 Names of prophet Muhammed (s)_.pdf")');
+        '(144,10, "Names of prophet Muhammed (s)", "أسماء النبي (ص)", "false","assets/pdf/13 Names of prophet Muhammed (s)_.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(47,10, "Ratib-ul-Haddad", "راتب الإمام الحداد", "false", "assets/pdf/09 Ratib-ul-Haddad.pdf")');
+        '(47,10, "Ratib-ul-Haddad", "راتب الإمام الحداد", "false", "assets/pdf/09 Ratib-ul-Haddad.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(310,10, "Asma-ul-Badr", "أسماء البدر", "false", "assets/pdf/09 Asma-ul-Badr.pdf")');
+        '(310,10, "Asma-ul-Badr", "أسماء البدر", "false", "assets/pdf/09 Asma-ul-Badr.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(309,10, "Regular dua.pdf", "أدعية العام", "false", "assets/pdf/09 Regular dua.pdf")');
+        '(309,10, "Regular dua.pdf", "أدعية العام", "false", "assets/pdf/09 Regular dua.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(102,10, "Prophetic Dua for Healing", "الأدعية النبوية للشفاء", "false", "assets/pdf/12 Prophetic Dua for Healing.pdf")');
-
+        '(102,10, "Prophetic Dua for Healing", "الأدعية النبوية للشفاء", "false", "assets/pdf/12 Prophetic Dua for Healing.pdf")');
 
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
@@ -236,9 +237,9 @@ Future<void> insertIntoTable() async {
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(326,11, "Zikr for Ease of Livelihood", "سبعون مرة لقضاء الدين", "false", "assets/pdf/11 Seventy Times of Livelihood.pdf")');
     await txn.rawInsert(
-         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-         '(59,11, "Qaseeda For Strengthening Faith", "إلهي لست للفردوس", "false", "assets/pdf/11 Qaseeda For Strengthening Faith.pdf")');
-     await txn.rawInsert(
+        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
+        '(59,11, "Qaseeda For Strengthening Faith", "إلهي لست للفردوس", "false", "assets/pdf/11 Qaseeda For Strengthening Faith.pdf")');
+    await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(60,11, "100 Thasbeeh after Jumua", "التسبيح", "false", "assets/pdf/11 100 Thasbeeh after Jumua.pdf")');
     await txn.rawInsert(
@@ -269,7 +270,7 @@ Future<void> insertIntoTable() async {
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(69,12, "After Washing", "بعد الاستنجاء", "false", "assets/pdf/12 After Washing.pdf")');
-   await txn.rawInsert(
+    await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(71,12, "Before Wearing New Dress, etc", "لـمن لبس الثوب الجديد", "false", "assets/pdf/12 Before Wearing New..pdf")');
     await txn.rawInsert(
@@ -593,16 +594,16 @@ Future<void> insertIntoTable() async {
         '(177,13, "Swalath-ul Thwibb", "صلاة الطب", "false","assets/pdf/13 Swalat-ul Twibb.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(337,13, "Swalat of Habeeb Umer Bin Hafeez", "بعض الصلوات للحبيب عمر", "false", "assets/pdf/13 swalath mifthahul khairat compressed.pdf")');
+        '(337,13, "Swalat of Habeeb Umer Bin Hafeez", "بعض الصلوات للحبيب عمر", "false", "assets/pdf/13 swalath mifthahul khairat compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(338,13, "Swalat of Sheikh Abu Backer Bin Salim", "بعض الصلوات للشيخ أبو بكر بن سالم", "false", "assets/pdf/13 swalath mifthahul khairat compressed.pdf")');
+        '(338,13, "Swalat of Sheikh Abu Backer Bin Salim", "بعض الصلوات للشيخ أبو بكر بن سالم", "false", "assets/pdf/13 swalath mifthahul khairat compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(205,13, "Mifthaul  Hairath", "مفتاح الخيرات", "false", "assets/pdf/13 swalath mifthahul khairat compressed.pdf")');
+        '(205,13, "Mifthaul  Hairath", "مفتاح الخيرات", "false", "assets/pdf/13 swalath mifthahul khairat compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(324,13, "Bashair-ul-khairat", "بشائر الخيرات", "false", "assets/pdf/13 Bashair-ul-Khairat.pdf")');
+        '(324,13, "Bashair-ul-khairat", "بشائر الخيرات", "false", "assets/pdf/13 Bashair-ul-Khairat.pdf")');
 
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
@@ -629,13 +630,12 @@ Future<void> insertIntoTable() async {
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(198,14, "Muhyudheen Mala", "محي الدين مال", "false", "assets/pdf/14 Muhyudheen Mala.pdf")');
 
-
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(185,15, "Ashraqa Baith", "أشرق بيت", "false", "assets/pdf/15 Ashraqa Baith.pdf")');
+        '(185,15, "Ashraqa Baith", "أشرق بيت", "false", "assets/pdf/15 Ashraqa Baith.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(186,15, "Ya Akrama Baith", "يا أكرم بيت", "false", "assets/pdf/15 Ya Akrama Baith.pdf")');
+        '(186,15, "Ya Akrama Baith", "يا أكرم بيت", "false", "assets/pdf/15 Ya Akrama Baith.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(185,15, "Qaseedat-ul Burda", "قصيدة البردة", "false", "assets/pdf/15 Qaseedat-ul Burda of Imam Busweeri.pdf")');
@@ -701,345 +701,342 @@ Future<void> insertIntoTable() async {
         '(204,15, "Aaramba Poovaya Baith", "نشيدة الشيخ الكندوري في مدح الحبيب", "false", "assets/pdf/15 Aaramba Poovaya Baith.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(312,15, "Aadi Avval Baith", "آد أول بيت", "false", "assets/pdf/15 Aadi Awwal Baith.pdf")');
+        '(312,15, "Aadi Avval Baith", "آد أول بيت", "false", "assets/pdf/15 Aadi Awwal Baith.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(313,15, "Aadi Amaite Baith", "آد أميت بيت", "false", "assets/pdf/15 Aadi Amaite Baith.pdf")');
+        '(313,15, "Aadi Amaite Baith", "آد أميت بيت", "false", "assets/pdf/15 Aadi Amaite Baith.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(314,15, "Badr Tawassul Baith", "بدر توسل بيت", "false", "assets/pdf/15 Badr Tawassul Baith.pdf")');
+        '(314,15, "Badr Tawassul Baith", "بدر توسل بيت", "false", "assets/pdf/15 Badr Tawassul Baith.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(315,15, "Makkathuditha Baith", "مكتدت بيت ", "false", "assets/pdf/15 Makkathuditha Baith.pdf")');
+        '(315,15, "Makkathuditha Baith", "مكتدت بيت ", "false", "assets/pdf/15 Makkathuditha Baith.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(316,15, "Abjad Baith", "أبجد بيت", "false", "assets/pdf/15 Abjad Baith")');
+        '(316,15, "Abjad Baith", "أبجد بيت", "false", "assets/pdf/15 Abjad Baith")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(317,15, "Aqsam baith", "أقسام بيت", "false", "assets/pdf/15 Aqsam Baith")');
+        '(317,15, "Aqsam baith", "أقسام بيت", "false", "assets/pdf/15 Aqsam Baith")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(318,15, "C.M Waliyyullah Tawassul Baith 2", "سي ام ولي الله بيت ", "false", "assets/pdf/15 C.M Waliyyullah_ _Tawassul_ _Baith 2.pdf")');
+        '(318,15, "C.M Waliyyullah Tawassul Baith 2", "سي ام ولي الله بيت ", "false", "assets/pdf/15 C.M Waliyyullah_ _Tawassul_ _Baith 2.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(319,15, "Sayyidatuna Amina Tawassul Baith", "سيدتنا آمنة توسل بيت", "false", "assets/pdf/15 Sayyidatuna Amina_ _Tawassul_ _Baith.pdf")');
+        '(319,15, "Sayyidatuna Amina Tawassul Baith", "سيدتنا آمنة توسل بيت", "false", "assets/pdf/15 Sayyidatuna Amina_ _Tawassul_ _Baith.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(320,15, "Sayyidatuna Ayisha Tawassul", "سيدتنا عائشة توسل بيت", "false", "assets/pdf/15 Sayyidatuna Ayisha Tawassul.pdf")');
+        '(320,15, "Sayyidatuna Ayisha Tawassul", "سيدتنا عائشة توسل بيت", "false", "assets/pdf/15 Sayyidatuna Ayisha Tawassul.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(70,15, "Baith and Ayath at the End of Majlis and Class", "القصيدة التي تقرأ في آخر المجالس", "false", "assets/pdf/12 Baith at the End of Majlis.pdf")');
+        '(70,15, "Baith and Ayath at the End of Majlis and Class", "القصيدة التي تقرأ في آخر المجالس", "false", "assets/pdf/12 Baith at the End of Majlis.pdf")');
 
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(206,16, "Dua on the Last Day of the Year", "دعاء آخر العام", "false", "assets/pdf/18 Dua on the Last Day of the Year.pdf")');
+        '(206,16, "Dua on the Last Day of the Year", "دعاء آخر العام", "false", "assets/pdf/18 Dua on the Last Day of the Year.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(207,16, "Dua on the First Day of the Year", "دعاء أول العام", "false", "assets/pdf/18 Dua on the First Day of the Year.pdf")');
+        '(207,16, "Dua on the First Day of the Year", "دعاء أول العام", "false", "assets/pdf/18 Dua on the First Day of the Year.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(208,16, "Dua on the First Day of the Year By Imam Ali Al-habshi ", "دعاء أول العام للحبشي", "false", "assets/pdf/18 Another Dua on the First Day of the Year By Imam Ali Bin Muhammed Al-habshi.pdf")');
+        '(208,16, "Dua on the First Day of the Year By Imam Ali Al-habshi ", "دعاء أول العام للحبشي", "false", "assets/pdf/18 Another Dua on the First Day of the Year By Imam Ali Bin Muhammed Al-habshi.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(209,16, "Dua to be Done on the First Ten Days of Muharram", "دعاء يقال في العشر الأول من المحرم", "false", "assets/pdf/18 Dua to be Done on the First Ten Days of Muharram in order to be Guarded from the Devil.pdf")');
+        '(209,16, "Dua to be Done on the First Ten Days of Muharram", "دعاء يقال في العشر الأول من المحرم", "false", "assets/pdf/18 Dua to be Done on the First Ten Days of Muharram in order to be Guarded from the Devil.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(210,16, "Writing of Bismi 113 Times", "كتابة البسمة مائة وثلاثة عشر مرة", "false", "assets/pdf/18 Writing of Bismi 113 Times.pdf")');
+        '(210,16, "Writing of Bismi 113 Times", "كتابة البسمة مائة وثلاثة عشر مرة", "false", "assets/pdf/18 Writing of Bismi 113 Times.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(211,16, "Ayathulkursi 360 times", "قراءة آية الكرسي ثلاثمائة وستين مرة", "false", "assets/pdf/18 Ayathul_ _kursi 360 times.pdf")');
+        '(211,16, "Ayathulkursi 360 times", "قراءة آية الكرسي ثلاثمائة وستين مرة", "false", "assets/pdf/18 Ayathul_ _kursi 360 times.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(212,16, "To Get Protection for Home From Difficult Creature", "لحفظ المنزل من الحيوانات المضرة", "false", "assets/pdf/18 To Get Protection for Home From Difficult Creature.pdf")');
+        '(212,16, "To Get Protection for Home From Difficult Creature", "لحفظ المنزل من الحيوانات المضرة", "false", "assets/pdf/18 To Get Protection for Home From Difficult Creature.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(213,16, "Dua on Ashoora Day", "دعاء في يوم عاشوراء", "false", "assets/pdf/18 Dua on Ashura Day.pdf")');
+        '(213,16, "Dua on Ashoora Day", "دعاء في يوم عاشوراء", "false", "assets/pdf/18 Dua on Ashura Day.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(214,16, "70 Times on Ashura Day", "سبعون مرة في يوم عاشوراء", "false", "assets/pdf/18 _70 Times on Ashura Day.pdf")');
+        '(214,16, "70 Times on Ashura Day", "سبعون مرة في يوم عاشوراء", "false", "assets/pdf/18 _70 Times on Ashura Day.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(215,16, "300 Times on Ashura Day", "ثلاثمائة مرة في يوم عاشوراء", "false", "assets/pdf/18 _300 Times on Ashura Day_.pdf")');
+        '(215,16, "300 Times on Ashura Day", "ثلاثمائة مرة في يوم عاشوراء", "false", "assets/pdf/18 _300 Times on Ashura Day_.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(216,16, "1000 Times on Ashura Day", "ألف مرة في يوم عاشوراء", "false", "assets/pdf/18 _1000 Times on Ashura Day_.pdf")');
+        '(216,16, "1000 Times on Ashura Day", "ألف مرة في يوم عاشوراء", "false", "assets/pdf/18 _1000 Times on Ashura Day_.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(217,16, "Dua after Reciting Al-Ikhlas 1000 Times on Ashura Day", "الدعاء بعد قراءة سورة الإخلاص ألف مرة في يوم عاشوراء", "false", "assets/pdf/18 Dua after Reciting Surah Al-Ikhlas 1000 Times on Ashura Day_.pdf")');
+        '(217,16, "Dua after Reciting Al-Ikhlas 1000 Times on Ashura Day", "الدعاء بعد قراءة سورة الإخلاص ألف مرة في يوم عاشوراء", "false", "assets/pdf/18 Dua after Reciting Surah Al-Ikhlas 1000 Times on Ashura Day_.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(218,16, "Another Dua on Ashura Day", "دعاء آخر في يوم عاشوراء", "false", "assets/pdf/18 Another Dua on Ashura Day.pdf")');
+        '(218,16, "Another Dua on Ashura Day", "دعاء آخر في يوم عاشوراء", "false", "assets/pdf/18 Another Dua on Ashura Day.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(219,16, "Dua in first day of Month Safar", "دعاء اليوم الأول ويوم الأربعاء الآخر من صفر", "false", "assets/pdf/18 Dua in first day of Month Safar _.pdf")');
+        '(219,16, "Dua in first day of Month Safar", "دعاء اليوم الأول ويوم الأربعاء الآخر من صفر", "false", "assets/pdf/18 Dua in first day of Month Safar _.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(220,16, "Dua for First Night of Rajab By Sheikh Jeelani", "دعاء يقال في أول ليلة من شهر رجب", "false", "assets/pdf/18 Dua for First Night of Rajab Taught By Sheikh Jeelani.pdf")');
+        '(220,16, "Dua for First Night of Rajab By Sheikh Jeelani", "دعاء يقال في أول ليلة من شهر رجب", "false", "assets/pdf/18 Dua for First Night of Rajab Taught By Sheikh Jeelani.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(221,16, "Istighfaar by Imam Haddad to be recited seven times everyday in Rajab", "استغفار الإمام الحداد في رجب", "false", "assets/pdf/18 Istighfaar Suggested by Imam Haddad to be _recited seven times everyday in the month of _Rajab.pdf")');
+        '(221,16, "Istighfaar by Imam Haddad to be recited seven times everyday in Rajab", "استغفار الإمام الحداد في رجب", "false", "assets/pdf/18 Istighfaar Suggested by Imam Haddad to be _recited seven times everyday in the month of _Rajab.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(222,16, "70 Times Istighfar Daily in Rajab", "استغفار يقرأ سبعون مرة وقت الفجر والمغرب", "false", "assets/pdf/18 _70 Times Istighfar Daily in the Holy Month of Rajab during the Time of Fajr and Maghrib.pdf")');
+        '(222,16, "70 Times Istighfar Daily in Rajab", "استغفار يقرأ سبعون مرة وقت الفجر والمغرب", "false", "assets/pdf/18 _70 Times Istighfar Daily in the Holy Month of Rajab during the Time of Fajr and Maghrib.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(223,16, "Dua of Prophet (S.A) when the moon of Rajab is sighted", "دعاء النبي (ص) إذا حضر شهر رجب", "false", "assets/pdf/18 Duaof Prophet Muhammed (S.A) when the moon of Rajab is sighted_.pdf")');
+        '(223,16, "Dua of Prophet (S.A) when the moon of Rajab is sighted", "دعاء النبي (ص) إذا حضر شهر رجب", "false", "assets/pdf/18 Duaof Prophet Muhammed (S.A) when the moon of Rajab is sighted_.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(224,16, "Istighfaru Rajab in every night of Rajab", "استغفار رجب يقرأ كل ليلة من رجب", "false", "assets/pdf/18 Istighfaru Rajab to be chanted every night of Rajab.pdf")');
+        '(224,16, "Istighfaru Rajab in every night of Rajab", "استغفار رجب يقرأ كل ليلة من رجب", "false", "assets/pdf/18 Istighfaru Rajab to be chanted every night of Rajab.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(225,16, "First Eight Ayahs from Sura Al-Dukhan", "ثمانية آيات من أول سورة الدخان في شعبان", "false", "assets/pdf/18 First Eight Ayahs from Sura Al-Dukhan.pdf")');
+        '(225,16, "First Eight Ayahs from Sura Al-Dukhan", "ثمانية آيات من أول سورة الدخان في شعبان", "false", "assets/pdf/18 First Eight Ayahs from Sura Al-Dukhan.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(226,16, "After asr of shahban 14", "دعاء سورة يس بعد عصر رابع عشر من شعبان", "false", "assets/pdf/18 After asr of shahban 14_.pdf")');
+        '(226,16, "After asr of shahban 14", "دعاء سورة يس بعد عصر رابع عشر من شعبان", "false", "assets/pdf/18 After asr of shahban 14_.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(227,16, "Between Isha and Maghrib on Baraat Night", "دعاء سورة يس في ليلة النصف من شعبان", "false", "assets/pdf/18 Between Isha and Maghrib on Baraat Night.pdf")');
+        '(227,16, "Between Isha and Maghrib on Baraat Night", "دعاء سورة يس في ليلة النصف من شعبان", "false", "assets/pdf/18 Between Isha and Maghrib on Baraat Night.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(228,16, "Dua On Baraat Day, after Magrib", "دعاء يقرأ بعد قراءة سورة الدخان", "false", "assets/pdf/18 Dua On Baraat Day, after reciting SuraFatiha and Al-Dhukhan after Magrib.pdf")');
+        '(228,16, "Dua On Baraat Day, after Magrib", "دعاء يقرأ بعد قراءة سورة الدخان", "false", "assets/pdf/18 Dua On Baraat Day, after reciting SuraFatiha and Al-Dhukhan after Magrib.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(229,16, "Special Dua on Baraat Day", "دعاء آخر في ليلة البراءة", "false", "assets/pdf/18 Special Dua on Baraat Day.pdf")');
+        '(229,16, "Special Dua on Baraat Day", "دعاء آخر في ليلة البراءة", "false", "assets/pdf/18 Special Dua on Baraat Day.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(230,16, "Dua to Prevent Proverty", "دعاء للسلامة من الفقر", "false", "assets/pdf/18 Dua to Prevent Proverty.pdf")');
+        '(230,16, "Dua to Prevent Proverty", "دعاء للسلامة من الفقر", "false", "assets/pdf/18 Dua to Prevent Proverty.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(231,16, "70 Times on Baraat night", "سبعون مرة في ليلة البراءة", "false", "assets/pdf/18 _70 Times on Baraat night.pdf")');
+        '(231,16, "70 Times on Baraat night", "سبعون مرة في ليلة البراءة", "false", "assets/pdf/18 _70 Times on Baraat night.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(232,16, "100 Times on Baraat night", "مائة مرة في ليلة البراءة", "false", "assets/pdf/18 _100 Times on Baraat night.pdf")');
+        '(232,16, "100 Times on Baraat night", "مائة مرة في ليلة البراءة", "false", "assets/pdf/18 _100 Times on Baraat night.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(233,16, "Dua of Sheikh Jeelani in the Night of Baraat", "دعاء الشيخ الجيلاني في ليلة البراءة", "false", "assets/pdf/18 Dua of Sheikh Jeelani in the Night of Baraat.pdf")');
+        '(233,16, "Dua of Sheikh Jeelani in the Night of Baraat", "دعاء الشيخ الجيلاني في ليلة البراءة", "false", "assets/pdf/18 Dua of Sheikh Jeelani in the Night of Baraat.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(234,16, "Two Dua of Imam Abdullahil Haddad", "دعاءان للإمام الحداد في ليلة البراءة", "false", "assets/pdf/18 Two Dua of Imam Abdullahil Haddad.pdf")');
+        '(234,16, "Two Dua of Imam Abdullahil Haddad", "دعاءان للإمام الحداد في ليلة البراءة", "false", "assets/pdf/18 Two Dua of Imam Abdullahil Haddad.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(235,16, "Dua Khatam-ul Quran", "دعاء ختم القرآن", "false", "assets/pdf/18 Dua Khatam-ul Quran.pdf")');
+        '(235,16, "Dua Khatam-ul Quran", "دعاء ختم القرآن", "false", "assets/pdf/18 Dua Khatam-ul Quran.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(236,16, "To Increase in LailathulQadr", "يكثر هذا الدعاء في ليالي ليلة القدر", "false", "assets/pdf/18 To Increase in Lailathul_ _Qadr.pdf")');
+        '(236,16, "To Increase in LailathulQadr", "يكثر هذا الدعاء في ليالي ليلة القدر", "false", "assets/pdf/18 To Increase in Lailathul_ _Qadr.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(237,16, "To Increase in the three Tens of Ramadan", "يكثر في العشر الثلاث", "false", "assets/pdf/18 To Increase in the three Tens of Ramadan.pdf")');
+        '(237,16, "To Increase in the three Tens of Ramadan", "يكثر في العشر الثلاث", "false", "assets/pdf/18 To Increase in the three Tens of Ramadan.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(238,16, "Dua in the First Ten", "دعاء العشر الأول", "false", "assets/pdf/18 Dua in the First Ten.pdf")');
+        '(238,16, "Dua in the First Ten", "دعاء العشر الأول", "false", "assets/pdf/18 Dua in the First Ten.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(239,16, "Dua in the Second Ten", "دعاء العشر الثاني", "false", "assets/pdf/18 Dua in the Second Ten.pdf")');
+        '(239,16, "Dua in the Second Ten", "دعاء العشر الثاني", "false", "assets/pdf/18 Dua in the Second Ten.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(240,16, "Dua in the Third Ten", "دعاء العشر الثالث", "false", "assets/pdf/18 Dua in the Third Ten.pdf")');
+        '(240,16, "Dua in the Third Ten", "دعاء العشر الثالث", "false", "assets/pdf/18 Dua in the Third Ten.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(241,16, "Intention for fast in ramadan", "نية صوم رمضان", "false", "assets/pdf/18 Intention For Fast_ __ in Ramadan.pdf")');
+        '(241,16, "Intention for fast in ramadan", "نية صوم رمضان", "false", "assets/pdf/18 Intention For Fast_ __ in Ramadan.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(242,16, "Dua after Breaking Fast", "يقال عقب الفطر", "false", "assets/pdf/18 Azkar & Dua after Breaking Fast.pdf")');
+        '(242,16, "Dua after Breaking Fast", "يقال عقب الفطر", "false", "assets/pdf/18 Azkar & Dua after Breaking Fast.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(243,16, "Intention of Taraweeh", "نية التراويح", "false", "assets/pdf/18 Intention of Taraweeh.pdf")');
+        '(243,16, "Intention of Taraweeh", "نية التراويح", "false", "assets/pdf/18 Intention of Taraweeh.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(244,16, "Dua after Taraweeh Prayer", "دعاء يقال بعد التراويح", "false", "assets/pdf/18 Dua after Taraweeh Prayer new.pdf")');
+        '(244,16, "Dua after Taraweeh Prayer", "دعاء يقال بعد التراويح", "false", "assets/pdf/18 Dua after Taraweeh Prayer new.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(245,16, "Another Dua after Taraweeh", "دعاء آخر بعد التراويح", "false", "assets/pdf/18 Another Dua after Taraweeh.pdf")');
+        '(245,16, "Another Dua after Taraweeh", "دعاء آخر بعد التراويح", "false", "assets/pdf/18 Another Dua after Taraweeh.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(246,16, "Another Dua of Imam Al-Atwaas after Taraweeh", "دعاء الإمام العطاس بعد التراويح", "false", "assets/pdf/18 Another Dua of Imam Al-Atwaas after Taraweeh_.pdf")');
+        '(246,16, "Another Dua of Imam Al-Atwaas after Taraweeh", "دعاء الإمام العطاس بعد التراويح", "false", "assets/pdf/18 Another Dua of Imam Al-Atwaas after Taraweeh_.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(247,16, "Dua in Lailathul Qadr", "دعاء يقال في ليالي ليلة القدر", "false", "assets/pdf/18 Dua in Lailathul Qadr.pdf")');
+        '(247,16, "Dua in Lailathul Qadr", "دعاء يقال في ليالي ليلة القدر", "false", "assets/pdf/18 Dua in Lailathul Qadr.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(248,16, "Qaseeda in the First Ten of Ramadan", "قصيدة للعشر الأول", "false", "assets/pdf/18 Qaseeda in the First Ten of Ramadan.pdf")');
+        '(248,16, "Qaseeda in the First Ten of Ramadan", "قصيدة للعشر الأول", "false", "assets/pdf/18 Qaseeda in the First Ten of Ramadan.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(249,16, "Qaseeda in the Second Ten of Ramadan", "قصيدة للعشر الثاني", "false", "assets/pdf/18 Qaseeda in the Second Ten of Ramadan.pdf")');
+        '(249,16, "Qaseeda in the Second Ten of Ramadan", "قصيدة للعشر الثاني", "false", "assets/pdf/18 Qaseeda in the Second Ten of Ramadan.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(250,16, "Qaseeda in the Third Ten of Ramadan", "قصيدة للعشر الثالث", "false", "assets/pdf/18 Qaseeda in the Third Ten of Ramadan.pdf")');
+        '(250,16, "Qaseeda in the Third Ten of Ramadan", "قصيدة للعشر الثالث", "false", "assets/pdf/18 Qaseeda in the Third Ten of Ramadan.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(251,16, "Dua for Parents", "دعاء بر الوالدين للإمام أبي الحب", "false", "assets/pdf/18 Dua_ _For Parents.pdf")');
+        '(251,16, "Dua for Parents", "دعاء بر الوالدين للإمام أبي الحب", "false", "assets/pdf/18 Dua_ _For Parents.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(252,16, "In Ten Days of Dul-Hijja", "ما يقال في العشر الأول من ذي الحجة", "false", "assets/pdf/18 In Ten Days of Dul-Hijja.pdf")');
+        '(252,16, "In Ten Days of Dul-Hijja", "ما يقال في العشر الأول من ذي الحجة", "false", "assets/pdf/18 In Ten Days of Dul-Hijja.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(253,16, "Dikr  on the Ten Days of Dul-Hijja to Get rid of Debt", "دعاء في العشر الأول من ذي الحجة", "false", "assets/pdf/18 Zikhr to Do on the Ten Days of Dul-Hijjato Get rid of Debt.pdf")');
+        '(253,16, "Dikr  on the Ten Days of Dul-Hijja to Get rid of Debt", "دعاء في العشر الأول من ذي الحجة", "false", "assets/pdf/18 Zikhr to Do on the Ten Days of Dul-Hijjato Get rid of Debt.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(254,16, "400 Times Before Both Eid Prayers", "ما يقال قبل صلاتي العيدين أربعمائة مرة", "false", "assets/pdf/18 _400 Times Before Both Eid Prayers.pdf")');
+        '(254,16, "400 Times Before Both Eid Prayers", "ما يقال قبل صلاتي العيدين أربعمائة مرة", "false", "assets/pdf/18 _400 Times Before Both Eid Prayers.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(255,16, "Intention of Eid-ul-Fitr Prayer", "نية صلاة العيد الأصغر", "false", "assets/pdf/18 Intention of Eid-ul-Fitr Prayer.pdf")');
+        '(255,16, "Intention of Eid-ul-Fitr Prayer", "نية صلاة العيد الأصغر", "false", "assets/pdf/18 Intention of Eid-ul-Fitr Prayer.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(256,16, "Intention of Eid-ul-Alha Prayer", "نية صلاة عيد الأضحى", "false", "assets/pdf/18 Intention of Eid-ul-Alha Prayer.pdf")');
+        '(256,16, "Intention of Eid-ul-Alha Prayer", "نية صلاة عيد الأضحى", "false", "assets/pdf/18 Intention of Eid-ul-Alha Prayer.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(257,16, "Form of Performing Eid Prayer", "كيفية صلاة العيدين", "false", "assets/pdf/18 Form of Performing Eid Prayer.pdf")');
+        '(257,16, "Form of Performing Eid Prayer", "كيفية صلاة العيدين", "false", "assets/pdf/18 Form of Performing Eid Prayer.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(258,16, "Thakbeer", "التكبير الكامل", "false", "assets/pdf/18 Thakbeer.pdf")');
+        '(258,16, "Thakbeer", "التكبير الكامل", "false", "assets/pdf/18 Thakbeer.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(259,16, "Special Days For Voluntary Fasts", "أيام صيام التطوع", "false", "assets/pdf/18 Special Days For Voluntary Fasts.pdf")');
+        '(259,16, "Special Days For Voluntary Fasts", "أيام صيام التطوع", "false", "assets/pdf/18 Special Days For Voluntary Fasts.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(260,16, "Niyyah of Voluntary Fasts", "نيات صيام التطوع", "false", "assets/pdf/18 Niyyah of Voluntary Fasts.pdf")');
+        '(260,16, "Niyyah of Voluntary Fasts", "نيات صيام التطوع", "false", "assets/pdf/18 Niyyah of Voluntary Fasts.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(323,16, "Five Holy Nights", "الليالي الخمسة الفاضلة", "false", "assets/pdf/16 Five Holy Nights.pdf")');
-
-
-    await txn.rawInsert(
-        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(261,17, "Two Rak’ahs Before Journey & Dua", "ركعتان قبل السفر", "false", "assets/pdf/19 Two Rakahs Before Journey _ __& Dua.pdf")');
-    await txn.rawInsert(
-        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(262,17, "At the Begening of Journey", "ما يقال وقت الخروج", "false", "assets/pdf/19 At the Begening of Journey.pdf")');
-    await txn.rawInsert(
-        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(263,17, "When Getting into The Vehicle", "ما يقال عند الركوب", "false", "assets/pdf/19 When Getting into the Vehicle new.pdf")');
-    await txn.rawInsert(
-        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(264,17, "Additional Adkar for Plane and Ship Passengers", "ما يقول مسافر الطائرة والسفينة خاصة", "false", "assets/pdf/19 Additional Azkar for Plane and Ship Passengers.pdf")');
-    await txn.rawInsert(
-        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(265,17, "To Recite When Entering Home", "ما يقول قبل الدخول إلى المنزل", "false", "assets/pdf/19 To Recite When Entering Home.pdf")');
-
+        '(323,16, "Five Holy Nights", "الليالي الخمسة الفاضلة", "false", "assets/pdf/16 Five Holy Nights.pdf")');
 
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(266,18, "Two Rak’ahs For the Deceased", "صلاة الأنس", "false", "assets/pdf/20 Two Rakahs For the Deceased.pdf")');
+        '(261,17, "Two Rak’ahs Before Journey & Dua", "ركعتان قبل السفر", "false", "assets/pdf/19 Two Rakahs Before Journey _ __& Dua.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(267,18, "Azkar upon mayyith", "العتاقة الصغرى والعتاقة الكبرى", "false", "assets/pdf/20 Azkar upon mayyith.pdf")');
+        '(262,17, "At the Begening of Journey", "ما يقال وقت الخروج", "false", "assets/pdf/19 At the Begening of Journey.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(268,18, "Soil Chanted with Zikr on the Kafan Cloth", "وضع التربة في الكفن", "false", "assets/pdf/20 Soil Chanted with Zikr on the Shroud (Kafan Cloth).pdf")');
+        '(263,17, "When Getting into The Vehicle", "ما يقال عند الركوب", "false", "assets/pdf/19 When Getting into the Vehicle new.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(269,18, "Janaza Prayer", "صلاة الجنازة", "false", "assets/pdf/20 Janaza Prayer.pdf")');
+        '(264,17, "Additional Adkar for Plane and Ship Passengers", "ما يقول مسافر الطائرة والسفينة خاصة", "false", "assets/pdf/19 Additional Azkar for Plane and Ship Passengers.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(270,18, "When Laying the Janaza in The Grave", "عند وضع الميت في القبر", "false", "assets/pdf/20 When Laying the Janaza in The Grave.pdf")');
-    await txn.rawInsert(
-        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(271,18, "Tasbeeth", "التثبيت", "false", "assets/pdf/20 Tasbeeth.pdf")');
-    await txn.rawInsert(
-        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(272,18, "To the Family of the Deceased (Taaziya)", "ما يقال أيام التعزية لأهل الميت", "false", "assets/pdf/20 To the Family of the Deceased_ _on the Day _of Condolence (Taaziya).pdf")');
-    await txn.rawInsert(
-        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(273,18, "Talqeen", "التلقين", "false", "assets/pdf/20 Talqeen.pdf")');
-    await txn.rawInsert(
-        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(274,18, "When Entering the Graveyard", "عند الدخول إلى المقابر", "false", "assets/pdf/20 When Entering the Graveyard.pdf")');
-    await txn.rawInsert(
-        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(275,18, "When Putting the Soil into the Grave", "عند تصريف التربة إلى القبر", "false", "assets/pdf/20 When Putting_ _the Soil into the Grave.pdf")');
-    await txn.rawInsert(
-        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(276,18, "While Pouring Water on the Grave", "عند صبّ الماء على القبر", "false", "assets/pdf/20 While Pouring Water on the Grave.pdf")');
-
+        '(265,17, "To Recite When Entering Home", "ما يقول قبل الدخول إلى المنزل", "false", "assets/pdf/19 To Recite When Entering Home.pdf")');
 
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(280,19, "Ihram", "الإحرام", "false", "assets/pdf/21 01 ihram_compressed.pdf")');
+        '(266,18, "Two Rak’ahs For the Deceased", "صلاة الأنس", "false", "assets/pdf/20 Two Rakahs For the Deceased.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(281,19, "While Entering Mecca & Haram", "يقول عند الدخول إلى مكة والحرم", "false", "assets/pdf/21 02 While Entering Mecca _& Haram_compressed.pdf")');
+        '(267,18, "Azkar upon mayyith", "العتاقة الصغرى والعتاقة الكبرى", "false", "assets/pdf/20 Azkar upon mayyith.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(282,19, "Tawaf", "الطواف", "false", "assets/pdf/21 03 Tawaf_compressed.pdf")');
+        '(268,18, "Soil Chanted with Zikr on the Kafan Cloth", "وضع التربة في الكفن", "false", "assets/pdf/20 Soil Chanted with Zikr on the Shroud (Kafan Cloth).pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(283,19, "Dua in Multazam", "دعاء الـملتزم", "false", "assets/pdf/21 04 Dua in Multazam_compressed.pdf")');
+        '(269,18, "Janaza Prayer", "صلاة الجنازة", "false", "assets/pdf/20 Janaza Prayer.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(284,19, "Dua in Maqam Ibrahim", "دعاء مقام إبراهيم", "false", "assets/pdf/21 05 Dua in Maqam Ibrahim_compressed.pdf")');
+        '(270,18, "When Laying the Janaza in The Grave", "عند وضع الميت في القبر", "false", "assets/pdf/20 When Laying the Janaza in The Grave.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(285,19, "Dua in Hijr-Ismaeel", "دعاء حجر إسماعيل", "false", "assets/pdf/21 06 Dua in Hijr-Ismaeel_compressed.pdf")');
+        '(271,18, "Tasbeeth", "التثبيت", "false", "assets/pdf/20 Tasbeeth.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(286,19, "While Drinking Zam Zam Water", "يقول عند شرب ماء زمزم", "false", "assets/pdf/21 07 While Drinking Zam Zam Water_compressed (1).pdf")');
+        '(272,18, "To the Family of the Deceased (Taaziya)", "ما يقال أيام التعزية لأهل الميت", "false", "assets/pdf/20 To the Family of the Deceased_ _on the Day _of Condolence (Taaziya).pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(287,19, "Sai", "السعي بين الصفا والـمروة", "false", "assets/pdf/21 08 Sai_compressed.pdf")');
+        '(273,18, "Talqeen", "التلقين", "false", "assets/pdf/20 Talqeen.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(288,19, "Dua before cutting hair", "الدعاء عند حلق الشعر", "false", "assets/pdf/21 09 Dua before cutting hair __compressed.pdf")');
+        '(274,18, "When Entering the Graveyard", "عند الدخول إلى المقابر", "false", "assets/pdf/20 When Entering the Graveyard.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(289,19, "While Travelling to Mina", "يقول عند الخروج إلى منى", "false", "assets/pdf/21 10 While Travelling to Mina_compressed.pdf")');
+        '(275,18, "When Putting the Soil into the Grave", "عند تصريف التربة إلى القبر", "false", "assets/pdf/20 When Putting_ _the Soil into the Grave.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(290,19, "Adkar of Arafa", "أذكار  عرفة", "false", "assets/pdf/21 11 Adkar of Arafa __compressed.pdf")');
+        '(276,18, "While Pouring Water on the Grave", "عند صبّ الماء على القبر", "false", "assets/pdf/20 While Pouring Water on the Grave.pdf")');
+
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(291,19, "To Say in Muzthalifah and Mashar al-Haram", "يقول في المزدلفة والمشعر الحرام", "false", "assets/pdf/21 12 To Say in Muzthalifah and Mashar al-_Haram_compressed.pdf")');
+        '(280,19, "Ihram", "الإحرام", "false", "assets/pdf/21 01 ihram_compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(292,19, "While Reaching in Mina Again", "يقول في منى مرّة ثانية", "false", "assets/pdf/21 13 While Reaching in Mina Again_compressed.pdf")');
+        '(281,19, "While Entering Mecca & Haram", "يقول عند الدخول إلى مكة والحرم", "false", "assets/pdf/21 02 While Entering Mecca _& Haram_compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(293,19, "Jamratul Aqabah", "جمرة العقبة", "false", "assets/pdf/21 14 Jamratul Aqabah_compressed.pdf")');
+        '(282,19, "Tawaf", "الطواف", "false", "assets/pdf/21 03 Tawaf_compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(294,19, "Intention of Tawaf of Wida", "طواف الوداع", "false", "assets/pdf/21 15 Intention of Tawaf of Wida_compressed.pdf")');
+        '(283,19, "Dua in Multazam", "دعاء الـملتزم", "false", "assets/pdf/21 04 Dua in Multazam_compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(295,19, "While Entering Madeena", "يقول عند الدخول إلى المدينة", "false", "assets/pdf/21 16 While Entering Madeena_compressed.pdf")');
+        '(284,19, "Dua in Maqam Ibrahim", "دعاء مقام إبراهيم", "false", "assets/pdf/21 05 Dua in Maqam Ibrahim_compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(296,19, "While Entering Masjid Nabavi", "يقول عند الدخول إلى مسجد النبوي", "false", "assets/pdf/21 17 While Entering Masjid Nabavi_compressed.pdf")');
+        '(285,19, "Dua in Hijr-Ismaeel", "دعاء حجر إسماعيل", "false", "assets/pdf/21 06 Dua in Hijr-Ismaeel_compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(297,19, "To Say After Tahiyyah in Roula", "يقول بعد صلاة التحية في الروضة", "false", "assets/pdf/21 18 To Say After Tahiyyah in Roula_compressed.pdf")');
+        '(286,19, "While Drinking Zam Zam Water", "يقول عند شرب ماء زمزم", "false", "assets/pdf/21 07 While Drinking Zam Zam Water_compressed (1).pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(298,19, "Salam To Muhammad (S)", "كيفية السلام للنبي (ص)", "false", "assets/pdf/21 19 Salam To Muhammad (S)__compressed.pdf")');
+        '(287,19, "Sai", "السعي بين الصفا والـمروة", "false", "assets/pdf/21 08 Sai_compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(299,19, "Salam to Aboobaker (R)", "كيفية السلام لأبي بكر (ر)", "false", "assets/pdf/21 20 Salam to Aboobaker (R)__compressed.pdf")');
+        '(288,19, "Dua before cutting hair", "الدعاء عند حلق الشعر", "false", "assets/pdf/21 09 Dua before cutting hair __compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(300,19, "Salam to Umer(R)", "كيفية السلام لعمر (ر)", "false", "assets/pdf/21 21 Salam to Umer(R)__compressed.pdf")');
+        '(289,19, "While Travelling to Mina", "يقول عند الخروج إلى منى", "false", "assets/pdf/21 10 While Travelling to Mina_compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(301,19, "Dua After Salam", "الدعاء بعد السلام", "false", "assets/pdf/21 22 Dua After Salam_compressed.pdf")');
+        '(290,19, "Adkar of Arafa", "أذكار  عرفة", "false", "assets/pdf/21 11 Adkar of Arafa __compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(302,19, "Salam for Jannat al-Baqi", "كيفية السلام لأهل البقيع", "false", "assets/pdf/21 23 Salam for Jannat al-Baqi_compressed.pdf")');
+        '(291,19, "To Say in Muzthalifah and Mashar al-Haram", "يقول في المزدلفة والمشعر الحرام", "false", "assets/pdf/21 12 To Say in Muzthalifah and Mashar al-_Haram_compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(303,19, "Salam to Uthman Bin Affan", "كيفية السلام لعثمان (ر)", "false", "assets/pdf/21 24 Salam to Uthman Bin Affan_compressed.pdf")');
+        '(292,19, "While Reaching in Mina Again", "يقول في منى مرّة ثانية", "false", "assets/pdf/21 13 While Reaching in Mina Again_compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(304,19, "Salam to Childrens of Prophet(S)", "كيفية السلام لأولاد النبي (ص)", "false", "assets/pdf/21 25 Salam to Childrens of Prophet(S) __compressed.pdf")');
+        '(293,19, "Jamratul Aqabah", "جمرة العقبة", "false", "assets/pdf/21 14 Jamratul Aqabah_compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(305,19, "Salam to Wives of Prophet(S)", "كيفية السلام لزوجات النبي (ص)", "false", "assets/pdf/21 26 Salam to Wives of Prophet  __(S)__compressed.pdf")');
+        '(294,19, "Intention of Tawaf of Wida", "طواف الوداع", "false", "assets/pdf/21 15 Intention of Tawaf of Wida_compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(306,19, "Salam to Daughters of Prophet(S)", "كيفية السلام لبنات النبي (ص)", "false", "assets/pdf/21 27 Salam to Daughters of Prophet _(S)__compressed.pdf")');
+        '(295,19, "While Entering Madeena", "يقول عند الدخول إلى المدينة", "false", "assets/pdf/21 16 While Entering Madeena_compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(307,19, "Salam to Shuhada of Uhud", "كيفية السلام لشهداء أحد (ر)", "false", "assets/pdf/21 28 Salam to Shuhada of Uhud_compressed.pdf")');
+        '(296,19, "While Entering Masjid Nabavi", "يقول عند الدخول إلى مسجد النبوي", "false", "assets/pdf/21 17 While Entering Masjid Nabavi_compressed.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(308,19, "To Increase in Returning", "يكثر في الرجوع إلى البلد", "false", "assets/pdf/21 29 To Increase in Returning __compressed.pdf")');
-  //start with 327
+        '(297,19, "To Say After Tahiyyah in Roula", "يقول بعد صلاة التحية في الروضة", "false", "assets/pdf/21 18 To Say After Tahiyyah in Roula_compressed.pdf")');
+    await txn.rawInsert(
+        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
+        '(298,19, "Salam To Muhammad (S)", "كيفية السلام للنبي (ص)", "false", "assets/pdf/21 19 Salam To Muhammad (S)__compressed.pdf")');
+    await txn.rawInsert(
+        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
+        '(299,19, "Salam to Aboobaker (R)", "كيفية السلام لأبي بكر (ر)", "false", "assets/pdf/21 20 Salam to Aboobaker (R)__compressed.pdf")');
+    await txn.rawInsert(
+        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
+        '(300,19, "Salam to Umer(R)", "كيفية السلام لعمر (ر)", "false", "assets/pdf/21 21 Salam to Umer(R)__compressed.pdf")');
+    await txn.rawInsert(
+        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
+        '(301,19, "Dua After Salam", "الدعاء بعد السلام", "false", "assets/pdf/21 22 Dua After Salam_compressed.pdf")');
+    await txn.rawInsert(
+        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
+        '(302,19, "Salam for Jannat al-Baqi", "كيفية السلام لأهل البقيع", "false", "assets/pdf/21 23 Salam for Jannat al-Baqi_compressed.pdf")');
+    await txn.rawInsert(
+        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
+        '(303,19, "Salam to Uthman Bin Affan", "كيفية السلام لعثمان (ر)", "false", "assets/pdf/21 24 Salam to Uthman Bin Affan_compressed.pdf")');
+    await txn.rawInsert(
+        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
+        '(304,19, "Salam to Childrens of Prophet(S)", "كيفية السلام لأولاد النبي (ص)", "false", "assets/pdf/21 25 Salam to Childrens of Prophet(S) __compressed.pdf")');
+    await txn.rawInsert(
+        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
+        '(305,19, "Salam to Wives of Prophet(S)", "كيفية السلام لزوجات النبي (ص)", "false", "assets/pdf/21 26 Salam to Wives of Prophet  __(S)__compressed.pdf")');
+    await txn.rawInsert(
+        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
+        '(306,19, "Salam to Daughters of Prophet(S)", "كيفية السلام لبنات النبي (ص)", "false", "assets/pdf/21 27 Salam to Daughters of Prophet _(S)__compressed.pdf")');
+    await txn.rawInsert(
+        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
+        '(307,19, "Salam to Shuhada of Uhud", "كيفية السلام لشهداء أحد (ر)", "false", "assets/pdf/21 28 Salam to Shuhada of Uhud_compressed.pdf")');
+    await txn.rawInsert(
+        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
+        '(308,19, "To Increase in Returning", "يكثر في الرجوع إلى البلد", "false", "assets/pdf/21 29 To Increase in Returning __compressed.pdf")');
+    //start with 327
   });
 }
 
