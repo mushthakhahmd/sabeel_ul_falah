@@ -98,446 +98,1796 @@ class _home_pageState extends State<home_page> {
                 SliverList(
                     delegate: SliverChildListDelegate(
                   [
-                    Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 30),
-                            child: Center(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Center(
-                                    child: Container(
-                                      width: 330,
-                                      height: 40,
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(12),
-                                          color: Colors.white),
-                                      child: Center(
-                                        child: TextField(
-                                          textAlign: TextAlign.left,
-                                          cursorColor: Colors.black45,
-                                          onTap: () {
-                                            FocusScope.of(context)
-                                                .requestFocus(FocusNode());
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const item_list_wakeup(
-                                                  cat_id: -1,
-                                                ),
-                                              ),
-                                            );
-                                          },
-                                          decoration: InputDecoration(
-                                            focusColor: Colors.blue,
-                                            prefixIcon: Icon(Icons.search),
-                                            hintText: 'search_by_title'.tr(),
-                                            hintStyle: TextStyle(
-                                                color: Colors.black45,
-                                                fontSize: 18),
-                                            border: InputBorder.none,
-                                          ),
-                                        ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 15, horizontal: 15),
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              width: MediaQuery.of(context).size.width,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12),
+                                  color: Colors.white),
+                              child: TextField(
+                                textAlign: TextAlign.left,
+                                cursorColor: Colors.black45,
+                                onTap: () {
+                                  FocusScope.of(context)
+                                      .requestFocus(FocusNode());
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const item_list_wakeup(
+                                        cat_id: -1,
                                       ),
                                     ),
+                                  );
+                                },
+                                decoration: InputDecoration(
+                                  focusColor: Colors.blue,
+                                  prefixIcon: Icon(Icons.search),
+                                  hintText: 'search_by_title'.tr(),
+                                  hintStyle: TextStyle(
+                                      color: Colors.black45, fontSize: 18),
+                                  border: InputBorder.none,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 30,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 0),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    'categories'.tr(),
+                                    style: GoogleFonts.roboto(
+                                        fontSize: 20,
+                                        color: const Color(0xff3F414E),
+                                        fontWeight: FontWeight.w600),
                                   ),
                                 ],
                               ),
                             ),
-                          ),
-                          const SizedBox(
-                            height: 30,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 35),
-                            child: Row(
-                              children: [
-                                Text(
-                                  'categories'.tr(),
-                                  style: GoogleFonts.roboto(
-                                      fontSize: 20,
-                                      color: const Color(0xff3F414E),
-                                      fontWeight: FontWeight.w600),
-                                ),
-                              ],
+                            const SizedBox(
+                              height: 20,
+                            ), //catagories
+                            Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Row(children: [
+                                    Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        const item_list_wakeup(
+                                                      cat_id: 1,
+                                                    ),
+                                                  ),
+                                                );
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 32,
+                                                      height: 32,
+                                                      decoration:
+                                                          const BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/thahajjud.png"),
+                                                          fit: BoxFit.fitHeight,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const SizedBox(
+                                                      height: 10,
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "أوراد التهجد",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Adkar of",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Tahajjud",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                  const SizedBox(
+                                    width: 15,
+                                  ),
+                                  Row(children: [
+                                    Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 2)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 32,
+                                                      height: 36,
+                                                      decoration:
+                                                          const BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/fajr1.png"),
+                                                          fit: BoxFit.fitHeight,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const SizedBox(
+                                                      height: 8,
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "أوراد الفجر",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Adkar of",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Fajr & Dhuha",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ]),
+                                  const SizedBox(
+                                    width: 15,
+                                  ),
+                                  Row(children: [
+                                    Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 3)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 32,
+                                                      height: 36,
+                                                      decoration:
+                                                          const BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/dikr.png"),
+                                                          fit: BoxFit.fitHeight,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const SizedBox(
+                                                      height: 5,
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "أذكار بعد",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "الصلوات",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Adkar After",
+                                                style: GoogleFonts.blinker(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Five Prayers",
+                                                style: GoogleFonts.blinker(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                ]),
+                            const SizedBox(
+                              height: 10,
+                            ), //1st row
+                            Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Row(children: [
+                                    Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 5)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 32,
+                                                      height: 36,
+                                                      decoration:
+                                                          const BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/duhr.png"),
+                                                          fit: BoxFit.fitHeight,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const SizedBox(
+                                                      height: 10,
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              right: 0),
+                                                      child: Container(
+                                                        child: Text(
+                                                          "أوراد الظهر",
+                                                          style:
+                                                              GoogleFonts.cairo(
+                                                                  fontSize: 14,
+                                                                  color: Colors
+                                                                      .black,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold),
+                                                        ),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Adkar Luhr",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "  ",
+                                                style: GoogleFonts.blinker(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                  const SizedBox(
+                                    width: 15,
+                                  ),
+                                  Row(children: [
+                                    Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 6)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 32,
+                                                      height: 36,
+                                                      decoration:
+                                                          const BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/asr1.png"),
+                                                          fit: BoxFit.fitHeight,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const SizedBox(
+                                                      height: 10,
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "أوراد العصر",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Adkar Asr",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "  ",
+                                                style: GoogleFonts.blinker(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                  const SizedBox(
+                                    width: 15,
+                                  ),
+                                  Row(children: [
+                                    Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 7)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 32,
+                                                      height: 36,
+                                                      decoration:
+                                                          const BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/magrib1.png"),
+                                                          fit: BoxFit.fitHeight,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const SizedBox(
+                                                      height: 10,
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "أوراد المغرب",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Adkar Magrib",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "   ",
+                                                style: GoogleFonts.blinker(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                ]),
+
+                            ///2nd row
+                            Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Row(children: [
+                                    Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 8)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const SizedBox(
+                                                      height: 26,
+                                                    ),
+                                                    Container(
+                                                      width: 28,
+                                                      height: 32,
+                                                      decoration:
+                                                          const BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/surah.png"),
+                                                          fit: BoxFit.fitWidth,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "السور لكل",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "يوم",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Daily Surah",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "  ",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 16,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w600),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                  const SizedBox(
+                                    width: 15,
+                                  ),
+                                  Row(children: [
+                                    Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 9)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 32,
+                                                      height: 36,
+                                                      decoration:
+                                                          const BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/isha1.png"),
+                                                          fit: BoxFit.fitHeight,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const SizedBox(
+                                                      height: 8,
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "أوراد العشاء",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Adkar Isha",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "   ",
+                                                style: GoogleFonts.blinker(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                  const SizedBox(
+                                    width: 15,
+                                  ),
+                                  Row(children: [
+                                    Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 10)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 32,
+                                                      height: 36,
+                                                      decoration:
+                                                          const BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/bed.png"),
+                                                          fit: BoxFit.fitWidth,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const SizedBox(
+                                                      height: 5,
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "الأوراد",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Daily Awrad",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                ]),
+
+                            //3rd row
+                            Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(children: [
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 11)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 32,
+                                                      height: 36,
+                                                      decoration:
+                                                          const BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/jumua.png"),
+                                                          fit: BoxFit.fitHeight,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "أذكار يوم",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "الجمعة",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Adkar of",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Friday",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                  const SizedBox(
+                                    width: 15,
+                                  ),
+                                  Row(children: [
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 19)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 32,
+                                                      height: 36,
+                                                      decoration:
+                                                          const BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/hajj.png"),
+                                                          fit: BoxFit.fitHeight,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "أذكار الحج",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "والعمرة",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Hajj &",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Umrah",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                  const SizedBox(
+                                    width: 15,
+                                  ),
+                                  Row(children: [
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 12)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 32,
+                                                      height: 36,
+                                                      decoration:
+                                                          const BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/muslim.png"),
+                                                          fit: BoxFit.cover,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "يوم المسلم",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "(سنة)",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Day of",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Muslim",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                ]), //4th row
+                            const SizedBox(
+                              height: 10,
                             ),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ), //catagories
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Row(children: [
-                                  Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const item_list_wakeup(
-                                                    cat_id: 1,
+                            Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Row(children: [
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 13)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
                                                   ),
                                                 ),
-                                              );
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: const BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  const SizedBox(
-                                                    height: 20,
-                                                  ),
-                                                  Container(
-                                                    width: 32,
-                                                    height: 32,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/thahajjud.png"),
-                                                        fit: BoxFit.fitHeight,
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 32,
+                                                      height: 36,
+                                                      decoration:
+                                                          const BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/dalaelul.png"),
+                                                          fit: BoxFit.fitWidth,
+                                                        ),
                                                       ),
                                                     ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "أوراد التهجد",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              right: 0),
+                                                      child: Container(
+                                                        child: Text(
+                                                          "دلائل الخيرات",
+                                                          style:
+                                                              GoogleFonts.cairo(
+                                                                  fontSize: 14,
+                                                                  color: Colors
+                                                                      .black,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold),
+                                                        ),
+                                                      ),
                                                     ),
-                                                  )
-                                                ],
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              right: 5),
+                                                      child: Container(
+                                                        child: Text(
+                                                          "والصلوات",
+                                                          style:
+                                                              GoogleFonts.cairo(
+                                                                  fontSize: 14,
+                                                                  color: Colors
+                                                                      .black,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold),
+                                                        ),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Adkar of",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Tahajjud",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Dalael",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 3,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "& Swalath",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                  const SizedBox(
+                                    width: 15,
                                   ),
-                                ]),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                Row(children: [
-                                  Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 2)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: const BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  const SizedBox(
-                                                    height: 20,
+                                  Row(children: [
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 14)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
                                                   ),
-                                                  Container(
-                                                    width: 32,
-                                                    height: 36,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/fajr1.png"),
-                                                        fit: BoxFit.fitHeight,
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 36,
+                                                      height: 36,
+                                                      decoration:
+                                                          const BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/moulid.png"),
+                                                          fit: BoxFit.fitHeight,
+                                                        ),
                                                       ),
                                                     ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 8,
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "أوراد الفجر",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
+                                                    const SizedBox(
+                                                      height: 10,
                                                     ),
-                                                  ),
-                                                ],
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              bottom: 5),
+                                                      child: Container(
+                                                        child: Text(
+                                                          "الموالد",
+                                                          style:
+                                                              GoogleFonts.cairo(
+                                                                  fontSize: 14,
+                                                                  color: Colors
+                                                                      .black,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
                                               ),
                                             ),
-                                          )
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Adkar of",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Fajr & Dhuha",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Moulid",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 16,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w600),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                  const SizedBox(
+                                    width: 15,
                                   ),
-                                ]),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                Row(children: [
-                                  Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 3)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: const BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  const SizedBox(
-                                                    height: 20,
+                                  Row(children: [
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 15)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
                                                   ),
-                                                  Container(
-                                                    width: 32,
-                                                    height: 36,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/dikr.png"),
-                                                        fit: BoxFit.fitHeight,
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 32,
+                                                      height: 36,
+                                                      decoration:
+                                                          const BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/quran.png"),
+                                                          fit: BoxFit.cover,
+                                                        ),
                                                       ),
                                                     ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 5,
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "أذكار بعد",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
+                                                    const SizedBox(
+                                                      height: 10,
                                                     ),
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "الصلوات",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Adkar After",
-                                              style: GoogleFonts.blinker(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Five Prayers",
-                                              style: GoogleFonts.blinker(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ]),
-                              ]),
-                          const SizedBox(
-                            height: 10,
-                          ), //1st row
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Row(children: [
-                                  Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 5)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: const BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  const SizedBox(
-                                                    height: 20,
-                                                  ),
-                                                  Container(
-                                                    width: 32,
-                                                    height: 36,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/duhr.png"),
-                                                        fit: BoxFit.fitHeight,
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              bottom: 10),
+                                                      child: Container(
+                                                        child: Text(
+                                                          "القصائد",
+                                                          style:
+                                                              GoogleFonts.cairo(
+                                                                  fontSize: 14,
+                                                                  color: Colors
+                                                                      .black,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold),
+                                                        ),
                                                       ),
                                                     ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Qaseeda",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 16,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w600),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                ]), //5th row
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Row(children: [
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 16)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
                                                   ),
-                                                  const SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            right: 0),
-                                                    child: Container(
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 36,
+                                                      height: 36,
+                                                      decoration: BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/spday.png"),
+                                                          fit: BoxFit.fitWidth,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      height: 5,
+                                                    ),
+                                                    Container(
                                                       child: Text(
-                                                        "أوراد الظهر",
+                                                        "أذكار الأيام",
                                                         style:
                                                             GoogleFonts.cairo(
                                                                 fontSize: 14,
@@ -548,927 +1898,222 @@ class _home_pageState extends State<home_page> {
                                                                         .bold),
                                                       ),
                                                     ),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Adkar Luhr",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "  ",
-                                              style: GoogleFonts.blinker(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ]),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                Row(children: [
-                                  Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 6)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: const BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  const SizedBox(
-                                                    height: 20,
-                                                  ),
-                                                  Container(
-                                                    width: 32,
-                                                    height: 36,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/asr1.png"),
-                                                        fit: BoxFit.fitHeight,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "أوراد العصر",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Adkar Asr",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "  ",
-                                              style: GoogleFonts.blinker(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ]),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                Row(children: [
-                                  Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 7)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: const BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  const SizedBox(
-                                                    height: 20,
-                                                  ),
-                                                  Container(
-                                                    width: 32,
-                                                    height: 36,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/magrib1.png"),
-                                                        fit: BoxFit.fitHeight,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "أوراد المغرب",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Adkar Magrib",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "   ",
-                                              style: GoogleFonts.blinker(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ]),
-                              ]),
-
-                          ///2nd row
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Row(children: [
-                                  Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 8)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: const BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  const SizedBox(
-                                                    height: 26,
-                                                  ),
-                                                  Container(
-                                                    width: 28,
-                                                    height: 32,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/surah.png"),
-                                                        fit: BoxFit.fitWidth,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "السور لكل",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "يوم",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Daily Surah",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "  ",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 16,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w600),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ]),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                Row(children: [
-                                  Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 9)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: const BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  const SizedBox(
-                                                    height: 20,
-                                                  ),
-                                                  Container(
-                                                    width: 32,
-                                                    height: 36,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/isha1.png"),
-                                                        fit: BoxFit.fitHeight,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 8,
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "أوراد العشاء",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Adkar Isha",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "   ",
-                                              style: GoogleFonts.blinker(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ]),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                Row(children: [
-                                  Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 10)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: const BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  const SizedBox(
-                                                    height: 20,
-                                                  ),
-                                                  Container(
-                                                    width: 32,
-                                                    height: 36,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/bed.png"),
-                                                        fit: BoxFit.fitWidth,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 5,
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "الأوراد",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Daily Awrad",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ]),
-                              ]),
-
-                          //3rd row
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 11)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: const BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  const SizedBox(
-                                                    height: 20,
-                                                  ),
-                                                  Container(
-                                                    width: 32,
-                                                    height: 36,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/jumua.png"),
-                                                        fit: BoxFit.fitHeight,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "أذكار يوم",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "الجمعة",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Adkar of",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Friday",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ]),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                Row(children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 19)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: const BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  const SizedBox(
-                                                    height: 20,
-                                                  ),
-                                                  Container(
-                                                    width: 32,
-                                                    height: 36,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/hajj.png"),
-                                                        fit: BoxFit.fitHeight,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "أذكار الحج",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "والعمرة",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Hajj &",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Umrah",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ]),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                Row(children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 12)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: const BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  const SizedBox(
-                                                    height: 20,
-                                                  ),
-                                                  Container(
-                                                    width: 32,
-                                                    height: 36,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/muslim.png"),
-                                                        fit: BoxFit.cover,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "يوم المسلم",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "(سنة)",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Day of",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Muslim",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ]),
-                              ]), //4th row
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Row(children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 13)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: const BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  const SizedBox(
-                                                    height: 20,
-                                                  ),
-                                                  Container(
-                                                    width: 32,
-                                                    height: 36,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/dalaelul.png"),
-                                                        fit: BoxFit.fitWidth,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            right: 0),
-                                                    child: Container(
+                                                    Container(
                                                       child: Text(
-                                                        "دلائل الخيرات",
+                                                        "الفاضلة",
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Special Days",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Adkar",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                  SizedBox(
+                                    width: 15,
+                                  ),
+                                  Row(children: [
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 17)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    SizedBox(
+                                                      height: 15,
+                                                    ),
+                                                    Container(
+                                                      width: 32,
+                                                      height: 36,
+                                                      decoration: BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/travel.png"),
+                                                          fit: BoxFit.fitWidth,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      height: 10,
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              bottom: 5),
+                                                      child: Container(
+                                                        child: Text(
+                                                          "أذكار السفر",
+                                                          style:
+                                                              GoogleFonts.cairo(
+                                                                  fontSize: 14,
+                                                                  color: Colors
+                                                                      .black,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Adkar & Dua",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "For Travelling",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                  SizedBox(
+                                    width: 15,
+                                  ),
+                                  Row(children: [
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const item_list_wakeup(
+                                                                cat_id: 18)));
+                                              },
+                                              child: Container(
+                                                height:
+                                                    130, //MediaQuery.of(content).size.height,
+                                                width: 90,
+                                                decoration: BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                        "assets/other/shape.png"),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 32,
+                                                      height: 36,
+                                                      decoration: BoxDecoration(
+                                                        image: DecorationImage(
+                                                          image: AssetImage(
+                                                              "assets/other/mayyith.jpg"),
+                                                          fit: BoxFit.fill,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      height: 5,
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        "ما ينفع",
                                                         style:
                                                             GoogleFonts.cairo(
                                                                 fontSize: 14,
@@ -1479,14 +2124,9 @@ class _home_pageState extends State<home_page> {
                                                                         .bold),
                                                       ),
                                                     ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            right: 5),
-                                                    child: Container(
+                                                    Container(
                                                       child: Text(
-                                                        "والصلوات",
+                                                        "للميت",
                                                         style:
                                                             GoogleFonts.cairo(
                                                                 fontSize: 14,
@@ -1496,883 +2136,342 @@ class _home_pageState extends State<home_page> {
                                                                     FontWeight
                                                                         .bold),
                                                       ),
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Dalael",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 3,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "& Swalath",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ]),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                Row(children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 14)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: const BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
+                                                    )
+                                                  ],
                                                 ),
                                               ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  const SizedBox(
-                                                    height: 20,
-                                                  ),
-                                                  Container(
-                                                    width: 36,
-                                                    height: 36,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/moulid.png"),
-                                                        fit: BoxFit.fitHeight,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            bottom: 5),
-                                                    child: Container(
-                                                      child: Text(
-                                                        "الموالد",
-                                                        style:
-                                                            GoogleFonts.cairo(
-                                                                fontSize: 14,
-                                                                color: Colors
-                                                                    .black,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "Which Benefits",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
                                               ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Moulid",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 16,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w600),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ]),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                Row(children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 15)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: const BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              child: Text(
+                                                "For Mayyith",
+                                                style: GoogleFonts.roboto(
+                                                    fontSize: 14,
+                                                    color: Colors.black,
+                                                    fontWeight:
+                                                        FontWeight.w400),
                                               ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  const SizedBox(
-                                                    height: 20,
-                                                  ),
-                                                  Container(
-                                                    width: 32,
-                                                    height: 36,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/quran.png"),
-                                                        fit: BoxFit.cover,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            bottom: 10),
-                                                    child: Container(
-                                                      child: Text(
-                                                        "القصائد",
-                                                        style:
-                                                            GoogleFonts.cairo(
-                                                                fontSize: 14,
-                                                                color: Colors
-                                                                    .black,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Qaseeda",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 16,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w600),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ]),
-                              ]), //5th row
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Row(children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 16)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  SizedBox(
-                                                    height: 20,
-                                                  ),
-                                                  Container(
-                                                    width: 36,
-                                                    height: 36,
-                                                    decoration: BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/spday.png"),
-                                                        fit: BoxFit.fitWidth,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  SizedBox(
-                                                    height: 5,
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "أذكار الأيام",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "الفاضلة",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Special Days",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Adkar",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ]),
-                                SizedBox(
-                                  width: 15,
-                                ),
-                                Row(children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 17)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  SizedBox(
-                                                    height: 15,
-                                                  ),
-                                                  Container(
-                                                    width: 32,
-                                                    height: 36,
-                                                    decoration: BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/travel.png"),
-                                                        fit: BoxFit.fitWidth,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            bottom: 5),
-                                                    child: Container(
-                                                      child: Text(
-                                                        "أذكار السفر",
-                                                        style:
-                                                            GoogleFonts.cairo(
-                                                                fontSize: 14,
-                                                                color: Colors
-                                                                    .black,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Adkar & Dua",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "For Travelling",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ]),
-                                SizedBox(
-                                  width: 15,
-                                ),
-                                Row(children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const item_list_wakeup(
-                                                              cat_id: 18)));
-                                            },
-                                            child: Container(
-                                              height:
-                                                  130, //MediaQuery.of(content).size.height,
-                                              width: 90,
-                                              decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/other/shape.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  SizedBox(
-                                                    height: 20,
-                                                  ),
-                                                  Container(
-                                                    width: 32,
-                                                    height: 36,
-                                                    decoration: BoxDecoration(
-                                                      image: DecorationImage(
-                                                        image: AssetImage(
-                                                            "assets/other/mayyith.jpg"),
-                                                        fit: BoxFit.fill,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  SizedBox(
-                                                    height: 5,
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "ما ينفع",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "للميت",
-                                                      style: GoogleFonts.cairo(
-                                                          fontSize: 14,
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "Which Benefits",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            child: Text(
-                                              "For Mayyith",
-                                              style: GoogleFonts.roboto(
-                                                  fontSize: 14,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ]),
-                              ]), //6th row
-                          // SizedBox(
-                          //   height: 10,
-                          // ),
-                          // Row(
-                          //     mainAxisAlignment: MainAxisAlignment.center,
-                          //     crossAxisAlignment: CrossAxisAlignment.center,
-                          //     children: [
-                          //       Row(children: [
-                          //         Column(
-                          //           mainAxisAlignment: MainAxisAlignment.center,
-                          //           children: [
-                          //             Row(
-                          //               children: [
-                          //                 Container(
-                          //                   height:
-                          //                   130, //MediaQuery.of(content).size.height,
-                          //                   width: 90,
-                          //                   decoration: BoxDecoration(
-                          //                     image: DecorationImage(
-                          //                       image: AssetImage("assets/shape.png"),
-                          //                       fit: BoxFit.cover,
-                          //                     ),
-                          //                   ),
-                          //                   child: Column(
-                          //                     mainAxisAlignment: MainAxisAlignment.center,
-                          //                     children: [
-                          //                       SizedBox(
-                          //                         height: 20,
-                          //                       ),
-                          //                       Container(
-                          //                         width: 32,
-                          //                         height: 36,
-                          //                         decoration: BoxDecoration(
-                          //                           image: DecorationImage(
-                          //                             image:
-                          //                             AssetImage("assets/hajj.png"),
-                          //                             fit: BoxFit.fitHeight,
-                          //                           ),
-                          //                         ),
-                          //                       ),
-                          //                       SizedBox(
-                          //                         height: 5,
-                          //                       ),
-                          //                       Container(
-                          //                         child: Text(
-                          //                           "اذكار الحج",
-                          //                           style: GoogleFonts.cairo(
-                          //                               fontSize: 13,
-                          //                               color: Colors.black,
-                          //                               fontWeight: FontWeight.bold),
-                          //                         ),
-                          //                       ),
-                          //                       Container(
-                          //                         child: Text(
-                          //                           "والعمرة",
-                          //                           style: GoogleFonts.cairo(
-                          //                               fontSize: 13,
-                          //                               color: Colors.black,
-                          //                               fontWeight: FontWeight.bold),
-                          //                         ),
-                          //                       )
-                          //                     ],
-                          //                   ),
-                          //                 ),
-                          //               ],
-                          //             ),
-                          //             SizedBox(
-                          //               height: 5,
-                          //             ),
-                          //             Row(
-                          //               children: [
-                          //                 Container(
-                          //                   child: Text(
-                          //                     "Hajj & Umrah",
-                          //                     style: GoogleFonts.roboto(
-                          //                         fontSize: 16,
-                          //                         color: Colors.black,
-                          //                         fontWeight: FontWeight.w600),
-                          //                   ),
-                          //                 )
-                          //               ],
-                          //             ),
-                          //             Row(
-                          //               children: [
-                          //                 Container(
-                          //                   child: Text(
-                          //                     " ",
-                          //                     style: GoogleFonts.roboto(
-                          //                         fontSize: 16,
-                          //                         color: Colors.black,
-                          //                         fontWeight: FontWeight.w600),
-                          //                   ),
-                          //                 )
-                          //               ],
-                          //             )
-                          //           ],
-                          //         ),
-                          //       ]),
-                          //       SizedBox(
-                          //         width: 20,
-                          //       ),
-                          //       Row(children: [
-                          //         Column(
-                          //           mainAxisAlignment: MainAxisAlignment.center,
-                          //           children: [
-                          //             Row(
-                          //               children: [
-                          //                 Container(
-                          //                   height:
-                          //                       130, //MediaQuery.of(content).size.height,
-                          //                   width: 90,
-                          //                   decoration: BoxDecoration(
-                          //                     image: DecorationImage(
-                          //                       image: AssetImage("assets/shape.png"),
-                          //                       fit: BoxFit.cover,
-                          //                     ),
-                          //                   ),
-                          //                   child: Column(
-                          //                     mainAxisAlignment:
-                          //                         MainAxisAlignment.center,
-                          //                     children: [
-                          //                       SizedBox(
-                          //                         height: 20,
-                          //                       ),
-                          //                       Container(
-                          //                         width: 32,
-                          //                         height: 36,
-                          //                         decoration: BoxDecoration(
-                          //                           image: DecorationImage(
-                          //                             image: AssetImage(
-                          //                                 "assets/mahlarath.png"),
-                          //                             fit: BoxFit.fitHeight,
-                          //                           ),
-                          //                         ),
-                          //                       ),
-                          //                       SizedBox(
-                          //                         height: 5,
-                          //                       ),
-                          //                       Container(
-                          //                         child: Text(
-                          //                           "المحضرة",
-                          //                           style: GoogleFonts.cairo(
-                          //                               fontSize: 13,
-                          //                               color: Colors.black,
-                          //                               fontWeight: FontWeight.bold),
-                          //                         ),
-                          //                       ),
-                          //                       Container(
-                          //                         child: Text(
-                          //                           "البدرية",
-                          //                           style: GoogleFonts.cairo(
-                          //                               fontSize: 13,
-                          //                               color: Colors.black,
-                          //                               fontWeight: FontWeight.bold),
-                          //                         ),
-                          //                       )
-                          //                     ],
-                          //                   ),
-                          //                 ),
-                          //               ],
-                          //             ),
-                          //             SizedBox(
-                          //               height: 5,
-                          //             ),
-                          //             Row(
-                          //               children: [
-                          //                 Container(
-                          //                   child: Text(
-                          //                     "Al Mahlarathul",
-                          //                     style: GoogleFonts.roboto(
-                          //                         fontSize: 16,
-                          //                         color: Colors.black,
-                          //                         fontWeight: FontWeight.w600),
-                          //                   ),
-                          //                 )
-                          //               ],
-                          //             ),
-                          //             Row(
-                          //               children: [
-                          //                 Container(
-                          //                   child: Text(
-                          //                     "badriyya",
-                          //                     style: GoogleFonts.roboto(
-                          //                         fontSize: 16,
-                          //                         color: Colors.black,
-                          //                         fontWeight: FontWeight.w600),
-                          //                   ),
-                          //                 )
-                          //               ],
-                          //             )
-                          //           ],
-                          //         ),
-                          //       ]),
-                          //       SizedBox(
-                          //         width: 20,
-                          //       ),
-                          //       Row(children: [
-                          //         Column(
-                          //           mainAxisAlignment: MainAxisAlignment.center,
-                          //           children: [
-                          //             Row(
-                          //               children: [
-                          //                 Container(
-                          //                   height:
-                          //                       130, //MediaQuery.of(content).size.height,
-                          //                   width: 90,
-                          //                   decoration: BoxDecoration(
-                          //                     image: DecorationImage(
-                          //                       image: AssetImage("assets/shape.png"),
-                          //                       fit: BoxFit.cover,
-                          //                     ),
-                          //                   ),
-                          //                   child: Column(
-                          //                     mainAxisAlignment:
-                          //                         MainAxisAlignment.center,
-                          //                     children: [
-                          //                       SizedBox(
-                          //                         height: 20,
-                          //                       ),
-                          //                       Container(
-                          //                         width: 32,
-                          //                         height: 36,
-                          //                         decoration: BoxDecoration(
-                          //                           image: DecorationImage(
-                          //                             image: AssetImage(
-                          //                                 "assets/other.png"),
-                          //                             fit: BoxFit.cover,
-                          //                           ),
-                          //                         ),
-                          //                       ),
-                          //                       SizedBox(
-                          //                         height: 5,
-                          //                       ),
-                          //                       Container(
-                          //                         child: Text(
-                          //                           "أذكار لسائر",
-                          //                           style: GoogleFonts.cairo(
-                          //                               fontSize: 13,
-                          //                               color: Colors.black,
-                          //                               fontWeight: FontWeight.bold),
-                          //                         ),
-                          //                       ),
-                          //                       Container(
-                          //                         child: Text(
-                          //                           "الأوقات",
-                          //                           style: GoogleFonts.cairo(
-                          //                               fontSize: 13,
-                          //                               color: Colors.black,
-                          //                               fontWeight: FontWeight.bold),
-                          //                         ),
-                          //                       )
-                          //                     ],
-                          //                   ),
-                          //                 ),
-                          //               ],
-                          //             ),
-                          //             SizedBox(
-                          //               height: 5,
-                          //             ),
-                          //             Row(
-                          //               children: [
-                          //                 Container(
-                          //                   child: Text(
-                          //                     "Adhkar On",
-                          //                     style: GoogleFonts.roboto(
-                          //                         fontSize: 16,
-                          //                         color: Colors.black,
-                          //                         fontWeight: FontWeight.w600),
-                          //                   ),
-                          //                 )
-                          //               ],
-                          //             ),
-                          //             Row(
-                          //               children: [
-                          //                 Container(
-                          //                   child: Text(
-                          //                     "Other Occasions",
-                          //                     style: GoogleFonts.roboto(
-                          //                         fontSize: 16,
-                          //                         color: Colors.black,
-                          //                         fontWeight: FontWeight.w600),
-                          //                   ),
-                          //                 )
-                          //               ],
-                          //             )
-                          //           ],
-                          //         ),
-                          //       ]),
-                          //     ]), //7th row
-                          SizedBox(
-                            height: 20,
-                          ), //7th row
-                        ]),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ]),
+                                ]), //6th row
+                            // SizedBox(
+                            //   height: 10,
+                            // ),
+                            // Row(
+                            //     mainAxisAlignment: MainAxisAlignment.center,
+                            //     crossAxisAlignment: CrossAxisAlignment.center,
+                            //     children: [
+                            //       Row(children: [
+                            //         Column(
+                            //           mainAxisAlignment: MainAxisAlignment.center,
+                            //           children: [
+                            //             Row(
+                            //               children: [
+                            //                 Container(
+                            //                   height:
+                            //                   130, //MediaQuery.of(content).size.height,
+                            //                   width: 90,
+                            //                   decoration: BoxDecoration(
+                            //                     image: DecorationImage(
+                            //                       image: AssetImage("assets/shape.png"),
+                            //                       fit: BoxFit.cover,
+                            //                     ),
+                            //                   ),
+                            //                   child: Column(
+                            //                     mainAxisAlignment: MainAxisAlignment.center,
+                            //                     children: [
+                            //                       SizedBox(
+                            //                         height: 20,
+                            //                       ),
+                            //                       Container(
+                            //                         width: 32,
+                            //                         height: 36,
+                            //                         decoration: BoxDecoration(
+                            //                           image: DecorationImage(
+                            //                             image:
+                            //                             AssetImage("assets/hajj.png"),
+                            //                             fit: BoxFit.fitHeight,
+                            //                           ),
+                            //                         ),
+                            //                       ),
+                            //                       SizedBox(
+                            //                         height: 5,
+                            //                       ),
+                            //                       Container(
+                            //                         child: Text(
+                            //                           "اذكار الحج",
+                            //                           style: GoogleFonts.cairo(
+                            //                               fontSize: 13,
+                            //                               color: Colors.black,
+                            //                               fontWeight: FontWeight.bold),
+                            //                         ),
+                            //                       ),
+                            //                       Container(
+                            //                         child: Text(
+                            //                           "والعمرة",
+                            //                           style: GoogleFonts.cairo(
+                            //                               fontSize: 13,
+                            //                               color: Colors.black,
+                            //                               fontWeight: FontWeight.bold),
+                            //                         ),
+                            //                       )
+                            //                     ],
+                            //                   ),
+                            //                 ),
+                            //               ],
+                            //             ),
+                            //             SizedBox(
+                            //               height: 5,
+                            //             ),
+                            //             Row(
+                            //               children: [
+                            //                 Container(
+                            //                   child: Text(
+                            //                     "Hajj & Umrah",
+                            //                     style: GoogleFonts.roboto(
+                            //                         fontSize: 16,
+                            //                         color: Colors.black,
+                            //                         fontWeight: FontWeight.w600),
+                            //                   ),
+                            //                 )
+                            //               ],
+                            //             ),
+                            //             Row(
+                            //               children: [
+                            //                 Container(
+                            //                   child: Text(
+                            //                     " ",
+                            //                     style: GoogleFonts.roboto(
+                            //                         fontSize: 16,
+                            //                         color: Colors.black,
+                            //                         fontWeight: FontWeight.w600),
+                            //                   ),
+                            //                 )
+                            //               ],
+                            //             )
+                            //           ],
+                            //         ),
+                            //       ]),
+                            //       SizedBox(
+                            //         width: 20,
+                            //       ),
+                            //       Row(children: [
+                            //         Column(
+                            //           mainAxisAlignment: MainAxisAlignment.center,
+                            //           children: [
+                            //             Row(
+                            //               children: [
+                            //                 Container(
+                            //                   height:
+                            //                       130, //MediaQuery.of(content).size.height,
+                            //                   width: 90,
+                            //                   decoration: BoxDecoration(
+                            //                     image: DecorationImage(
+                            //                       image: AssetImage("assets/shape.png"),
+                            //                       fit: BoxFit.cover,
+                            //                     ),
+                            //                   ),
+                            //                   child: Column(
+                            //                     mainAxisAlignment:
+                            //                         MainAxisAlignment.center,
+                            //                     children: [
+                            //                       SizedBox(
+                            //                         height: 20,
+                            //                       ),
+                            //                       Container(
+                            //                         width: 32,
+                            //                         height: 36,
+                            //                         decoration: BoxDecoration(
+                            //                           image: DecorationImage(
+                            //                             image: AssetImage(
+                            //                                 "assets/mahlarath.png"),
+                            //                             fit: BoxFit.fitHeight,
+                            //                           ),
+                            //                         ),
+                            //                       ),
+                            //                       SizedBox(
+                            //                         height: 5,
+                            //                       ),
+                            //                       Container(
+                            //                         child: Text(
+                            //                           "المحضرة",
+                            //                           style: GoogleFonts.cairo(
+                            //                               fontSize: 13,
+                            //                               color: Colors.black,
+                            //                               fontWeight: FontWeight.bold),
+                            //                         ),
+                            //                       ),
+                            //                       Container(
+                            //                         child: Text(
+                            //                           "البدرية",
+                            //                           style: GoogleFonts.cairo(
+                            //                               fontSize: 13,
+                            //                               color: Colors.black,
+                            //                               fontWeight: FontWeight.bold),
+                            //                         ),
+                            //                       )
+                            //                     ],
+                            //                   ),
+                            //                 ),
+                            //               ],
+                            //             ),
+                            //             SizedBox(
+                            //               height: 5,
+                            //             ),
+                            //             Row(
+                            //               children: [
+                            //                 Container(
+                            //                   child: Text(
+                            //                     "Al Mahlarathul",
+                            //                     style: GoogleFonts.roboto(
+                            //                         fontSize: 16,
+                            //                         color: Colors.black,
+                            //                         fontWeight: FontWeight.w600),
+                            //                   ),
+                            //                 )
+                            //               ],
+                            //             ),
+                            //             Row(
+                            //               children: [
+                            //                 Container(
+                            //                   child: Text(
+                            //                     "badriyya",
+                            //                     style: GoogleFonts.roboto(
+                            //                         fontSize: 16,
+                            //                         color: Colors.black,
+                            //                         fontWeight: FontWeight.w600),
+                            //                   ),
+                            //                 )
+                            //               ],
+                            //             )
+                            //           ],
+                            //         ),
+                            //       ]),
+                            //       SizedBox(
+                            //         width: 20,
+                            //       ),
+                            //       Row(children: [
+                            //         Column(
+                            //           mainAxisAlignment: MainAxisAlignment.center,
+                            //           children: [
+                            //             Row(
+                            //               children: [
+                            //                 Container(
+                            //                   height:
+                            //                       130, //MediaQuery.of(content).size.height,
+                            //                   width: 90,
+                            //                   decoration: BoxDecoration(
+                            //                     image: DecorationImage(
+                            //                       image: AssetImage("assets/shape.png"),
+                            //                       fit: BoxFit.cover,
+                            //                     ),
+                            //                   ),
+                            //                   child: Column(
+                            //                     mainAxisAlignment:
+                            //                         MainAxisAlignment.center,
+                            //                     children: [
+                            //                       SizedBox(
+                            //                         height: 20,
+                            //                       ),
+                            //                       Container(
+                            //                         width: 32,
+                            //                         height: 36,
+                            //                         decoration: BoxDecoration(
+                            //                           image: DecorationImage(
+                            //                             image: AssetImage(
+                            //                                 "assets/other.png"),
+                            //                             fit: BoxFit.cover,
+                            //                           ),
+                            //                         ),
+                            //                       ),
+                            //                       SizedBox(
+                            //                         height: 5,
+                            //                       ),
+                            //                       Container(
+                            //                         child: Text(
+                            //                           "أذكار لسائر",
+                            //                           style: GoogleFonts.cairo(
+                            //                               fontSize: 13,
+                            //                               color: Colors.black,
+                            //                               fontWeight: FontWeight.bold),
+                            //                         ),
+                            //                       ),
+                            //                       Container(
+                            //                         child: Text(
+                            //                           "الأوقات",
+                            //                           style: GoogleFonts.cairo(
+                            //                               fontSize: 13,
+                            //                               color: Colors.black,
+                            //                               fontWeight: FontWeight.bold),
+                            //                         ),
+                            //                       )
+                            //                     ],
+                            //                   ),
+                            //                 ),
+                            //               ],
+                            //             ),
+                            //             SizedBox(
+                            //               height: 5,
+                            //             ),
+                            //             Row(
+                            //               children: [
+                            //                 Container(
+                            //                   child: Text(
+                            //                     "Adhkar On",
+                            //                     style: GoogleFonts.roboto(
+                            //                         fontSize: 16,
+                            //                         color: Colors.black,
+                            //                         fontWeight: FontWeight.w600),
+                            //                   ),
+                            //                 )
+                            //               ],
+                            //             ),
+                            //             Row(
+                            //               children: [
+                            //                 Container(
+                            //                   child: Text(
+                            //                     "Other Occasions",
+                            //                     style: GoogleFonts.roboto(
+                            //                         fontSize: 16,
+                            //                         color: Colors.black,
+                            //                         fontWeight: FontWeight.w600),
+                            //                   ),
+                            //                 )
+                            //               ],
+                            //             )
+                            //           ],
+                            //         ),
+                            //       ]),
+                            //     ]), //7th row
+                            SizedBox(
+                              height: 20,
+                            ), //7th row
+                          ]),
+                    ),
                   ],
                 )),
               ],
