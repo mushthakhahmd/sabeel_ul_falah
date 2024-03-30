@@ -46,14 +46,13 @@ class _counterState extends State<CounterView> {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Image.asset("assets/counter_home.png"),
+            Image.asset("assets/other/counter_home.png"),
             Positioned(
               bottom: 280,
               //right: 0,
               child: Text(
                 _counter.toString(),
                 textAlign: TextAlign.center,
-                textScaleFactor: 3.5,
               ),
             ),
             Positioned(

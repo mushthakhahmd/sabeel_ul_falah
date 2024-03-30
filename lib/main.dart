@@ -18,12 +18,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'sabeelulfalah',
-      theme: ThemeData(
- 
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: false),
       home: const splash(),
     );
   }
 }
-

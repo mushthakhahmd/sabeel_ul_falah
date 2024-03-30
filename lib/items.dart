@@ -30,9 +30,7 @@ class _item_list_wakeupState extends State<item_list_wakeup> {
         body: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(
-                right: 320,top: 20
-              ),
+              padding: const EdgeInsets.only(right: 320, top: 20),
               child: Container(
                 height: 36,
                 width: 36,
@@ -89,7 +87,8 @@ class _item_list_wakeupState extends State<item_list_wakeup> {
                                 leading: SizedBox(
                                     height: 50.0,
                                     width: 50.0, // fixed width and height
-                                    child: Image.asset("list.png")),
+                                    child:
+                                        Image.asset("assets/other/list.png")),
                                 title: Text(
                                   item.title,
                                   style: const TextStyle(

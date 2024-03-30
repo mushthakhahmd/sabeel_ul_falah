@@ -60,40 +60,38 @@ class _home_pageState extends State<home_page> {
                     height: 25,
                   ),
                   ListTile(
-                    leading: Icon(
-                      Icons.home,
-                      color: Color(0xff1D438A),
-                    ),
-                    title: Text(
-                      "Home",
-                      style: TextStyle(fontWeight: FontWeight.w500),
-                    ),
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const home_page()));
-                    }
-                  ),
+                      leading: Icon(
+                        Icons.home,
+                        color: Color(0xff1D438A),
+                      ),
+                      title: Text(
+                        "Home",
+                        style: TextStyle(fontWeight: FontWeight.w500),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const home_page()));
+                      }),
                   Divider(
                     color: Colors.black26,
                   ),
                   ListTile(
-                    leading: Icon(
-                      Icons.account_circle_rounded,
-                      color: Color(0xff1D438A),
-                    ),
-                    title: Text(
-                      "About Us",
-                      style: TextStyle(fontWeight: FontWeight.w500),
-                    ),
-                        onTap: () {
+                      leading: Icon(
+                        Icons.account_circle_rounded,
+                        color: Color(0xff1D438A),
+                      ),
+                      title: Text(
+                        "About Us",
+                        style: TextStyle(fontWeight: FontWeight.w500),
+                      ),
+                      onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => const about_us()));
-                      }
-                  ),
+                      }),
                   // Divider(
                   //   color: Colors.black26,
                   // ),
@@ -208,7 +206,8 @@ class _home_pageState extends State<home_page> {
                                       width: 330,
                                       height: 40,
                                       decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(12),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
                                           color: Colors.white),
                                       child: Center(
                                         child: TextField(
@@ -291,7 +290,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: const BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -309,7 +308,7 @@ class _home_pageState extends State<home_page> {
                                                         const BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/thahajjud.png"),
+                                                            "assets/other/thahajjud.png"),
                                                         fit: BoxFit.fitHeight,
                                                       ),
                                                     ),
@@ -389,7 +388,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: const BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -407,7 +406,7 @@ class _home_pageState extends State<home_page> {
                                                         const BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/fajr1.png"),
+                                                            "assets/other/fajr1.png"),
                                                         fit: BoxFit.fitHeight,
                                                       ),
                                                     ),
@@ -487,7 +486,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: const BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -505,7 +504,7 @@ class _home_pageState extends State<home_page> {
                                                         const BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/dikr.png"),
+                                                            "assets/other/dikr.png"),
                                                         fit: BoxFit.fitHeight,
                                                       ),
                                                     ),
@@ -599,7 +598,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: const BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -614,10 +613,10 @@ class _home_pageState extends State<home_page> {
                                                     width: 32,
                                                     height: 36,
                                                     decoration:
-                                                    const BoxDecoration(
+                                                        const BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/duhr.png"),
+                                                            "assets/other/duhr.png"),
                                                         fit: BoxFit.fitHeight,
                                                       ),
                                                     ),
@@ -632,11 +631,14 @@ class _home_pageState extends State<home_page> {
                                                     child: Container(
                                                       child: Text(
                                                         "أوراد الظهر",
-                                                        style: GoogleFonts.cairo(
-                                                            fontSize: 14,
-                                                            color: Colors.black,
-                                                            fontWeight:
-                                                                FontWeight.bold),
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
                                                       ),
                                                     ),
                                                   )
@@ -702,7 +704,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: const BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -720,7 +722,7 @@ class _home_pageState extends State<home_page> {
                                                         const BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/asr1.png"),
+                                                            "assets/other/asr1.png"),
                                                         fit: BoxFit.fitHeight,
                                                       ),
                                                     ),
@@ -800,7 +802,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: const BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -818,7 +820,7 @@ class _home_pageState extends State<home_page> {
                                                         const BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/magrib1.png"),
+                                                            "assets/other/magrib1.png"),
                                                         fit: BoxFit.fitHeight,
                                                       ),
                                                     ),
@@ -876,8 +878,6 @@ class _home_pageState extends State<home_page> {
                                 ]),
                               ]),
 
-
-
                           ///2nd row
                           Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -903,13 +903,13 @@ class _home_pageState extends State<home_page> {
                                               decoration: const BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
                                               child: Column(
                                                 mainAxisAlignment:
-                                                MainAxisAlignment.center,
+                                                    MainAxisAlignment.center,
                                                 children: [
                                                   const SizedBox(
                                                     height: 26,
@@ -918,10 +918,10 @@ class _home_pageState extends State<home_page> {
                                                     width: 28,
                                                     height: 32,
                                                     decoration:
-                                                    const BoxDecoration(
+                                                        const BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/surah.png"),
+                                                            "assets/other/surah.png"),
                                                         fit: BoxFit.fitWidth,
                                                       ),
                                                     ),
@@ -933,7 +933,7 @@ class _home_pageState extends State<home_page> {
                                                           fontSize: 14,
                                                           color: Colors.black,
                                                           fontWeight:
-                                                          FontWeight.bold),
+                                                              FontWeight.bold),
                                                     ),
                                                   ),
                                                   Container(
@@ -943,7 +943,7 @@ class _home_pageState extends State<home_page> {
                                                           fontSize: 14,
                                                           color: Colors.black,
                                                           fontWeight:
-                                                          FontWeight.bold),
+                                                              FontWeight.bold),
                                                     ),
                                                   )
                                                 ],
@@ -1008,7 +1008,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: const BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -1017,15 +1017,16 @@ class _home_pageState extends State<home_page> {
                                                     MainAxisAlignment.center,
                                                 children: [
                                                   const SizedBox(
-                                                    height: 20,                                                    ),
+                                                    height: 20,
+                                                  ),
                                                   Container(
                                                     width: 32,
                                                     height: 36,
                                                     decoration:
-                                                    const BoxDecoration(
+                                                        const BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/isha1.png"),
+                                                            "assets/other/isha1.png"),
                                                         fit: BoxFit.fitHeight,
                                                       ),
                                                     ),
@@ -1040,7 +1041,7 @@ class _home_pageState extends State<home_page> {
                                                           fontSize: 14,
                                                           color: Colors.black,
                                                           fontWeight:
-                                                          FontWeight.bold),
+                                                              FontWeight.bold),
                                                     ),
                                                   )
                                                 ],
@@ -1105,7 +1106,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: const BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -1120,14 +1121,15 @@ class _home_pageState extends State<home_page> {
                                                     width: 32,
                                                     height: 36,
                                                     decoration:
-                                                    const BoxDecoration(
+                                                        const BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/bed.png"),
+                                                            "assets/other/bed.png"),
                                                         fit: BoxFit.fitWidth,
                                                       ),
                                                     ),
-                                                  ),                                      const SizedBox(
+                                                  ),
+                                                  const SizedBox(
                                                     height: 5,
                                                   ),
                                                   Container(
@@ -1137,7 +1139,7 @@ class _home_pageState extends State<home_page> {
                                                           fontSize: 14,
                                                           color: Colors.black,
                                                           fontWeight:
-                                                          FontWeight.bold),
+                                                              FontWeight.bold),
                                                     ),
                                                   ),
                                                 ],
@@ -1207,7 +1209,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: const BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -1222,10 +1224,10 @@ class _home_pageState extends State<home_page> {
                                                     width: 32,
                                                     height: 36,
                                                     decoration:
-                                                    const BoxDecoration(
+                                                        const BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/jumua.png"),
+                                                            "assets/other/jumua.png"),
                                                         fit: BoxFit.fitHeight,
                                                       ),
                                                     ),
@@ -1237,7 +1239,7 @@ class _home_pageState extends State<home_page> {
                                                           fontSize: 14,
                                                           color: Colors.black,
                                                           fontWeight:
-                                                          FontWeight.bold),
+                                                              FontWeight.bold),
                                                     ),
                                                   ),
                                                   Container(
@@ -1247,7 +1249,7 @@ class _home_pageState extends State<home_page> {
                                                           fontSize: 14,
                                                           color: Colors.black,
                                                           fontWeight:
-                                                          FontWeight.bold),
+                                                              FontWeight.bold),
                                                     ),
                                                   )
                                                 ],
@@ -1313,7 +1315,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: const BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -1331,7 +1333,7 @@ class _home_pageState extends State<home_page> {
                                                         const BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/hajj.png"),
+                                                            "assets/other/hajj.png"),
                                                         fit: BoxFit.fitHeight,
                                                       ),
                                                     ),
@@ -1419,7 +1421,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: const BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -1437,7 +1439,7 @@ class _home_pageState extends State<home_page> {
                                                         const BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/muslim.png"),
+                                                            "assets/other/muslim.png"),
                                                         fit: BoxFit.cover,
                                                       ),
                                                     ),
@@ -1530,7 +1532,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: const BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -1548,7 +1550,7 @@ class _home_pageState extends State<home_page> {
                                                         const BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/dalaelul.png"),
+                                                            "assets/other/dalaelul.png"),
                                                         fit: BoxFit.fitWidth,
                                                       ),
                                                     ),
@@ -1560,11 +1562,14 @@ class _home_pageState extends State<home_page> {
                                                     child: Container(
                                                       child: Text(
                                                         "دلائل الخيرات",
-                                                        style: GoogleFonts.cairo(
-                                                            fontSize: 14,
-                                                            color: Colors.black,
-                                                            fontWeight:
-                                                                FontWeight.bold),
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
                                                       ),
                                                     ),
                                                   ),
@@ -1575,11 +1580,14 @@ class _home_pageState extends State<home_page> {
                                                     child: Container(
                                                       child: Text(
                                                         "والصلوات",
-                                                        style: GoogleFonts.cairo(
-                                                            fontSize: 14,
-                                                            color: Colors.black,
-                                                            fontWeight:
-                                                                FontWeight.bold),
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
                                                       ),
                                                     ),
                                                   )
@@ -1649,7 +1657,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: const BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -1667,7 +1675,7 @@ class _home_pageState extends State<home_page> {
                                                         const BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/moulid.png"),
+                                                            "assets/other/moulid.png"),
                                                         fit: BoxFit.fitHeight,
                                                       ),
                                                     ),
@@ -1682,11 +1690,14 @@ class _home_pageState extends State<home_page> {
                                                     child: Container(
                                                       child: Text(
                                                         "الموالد",
-                                                        style: GoogleFonts.cairo(
-                                                            fontSize: 14,
-                                                            color: Colors.black,
-                                                            fontWeight:
-                                                                FontWeight.bold),
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
                                                       ),
                                                     ),
                                                   ),
@@ -1753,7 +1764,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: const BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -1771,7 +1782,7 @@ class _home_pageState extends State<home_page> {
                                                         const BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/quran.png"),
+                                                            "assets/other/quran.png"),
                                                         fit: BoxFit.cover,
                                                       ),
                                                     ),
@@ -1786,11 +1797,14 @@ class _home_pageState extends State<home_page> {
                                                     child: Container(
                                                       child: Text(
                                                         "القصائد",
-                                                        style: GoogleFonts.cairo(
-                                                            fontSize: 14,
-                                                            color: Colors.black,
-                                                            fontWeight:
-                                                                FontWeight.bold),
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
                                                       ),
                                                     ),
                                                   ),
@@ -1861,7 +1875,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -1878,7 +1892,7 @@ class _home_pageState extends State<home_page> {
                                                     decoration: BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/spday.png"),
+                                                            "assets/other/spday.png"),
                                                         fit: BoxFit.fitWidth,
                                                       ),
                                                     ),
@@ -1969,7 +1983,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -1986,7 +2000,7 @@ class _home_pageState extends State<home_page> {
                                                     decoration: BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/travel.png"),
+                                                            "assets/other/travel.png"),
                                                         fit: BoxFit.fitWidth,
                                                       ),
                                                     ),
@@ -2001,11 +2015,14 @@ class _home_pageState extends State<home_page> {
                                                     child: Container(
                                                       child: Text(
                                                         "أذكار السفر",
-                                                        style: GoogleFonts.cairo(
-                                                            fontSize: 14,
-                                                            color: Colors.black,
-                                                            fontWeight:
-                                                                FontWeight.bold),
+                                                        style:
+                                                            GoogleFonts.cairo(
+                                                                fontSize: 14,
+                                                                color: Colors
+                                                                    .black,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
                                                       ),
                                                     ),
                                                   ),
@@ -2072,7 +2089,7 @@ class _home_pageState extends State<home_page> {
                                               decoration: BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/shape.png"),
+                                                      "assets/other/shape.png"),
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
@@ -2089,7 +2106,7 @@ class _home_pageState extends State<home_page> {
                                                     decoration: BoxDecoration(
                                                       image: DecorationImage(
                                                         image: AssetImage(
-                                                            "assets/mayyith.jpg"),
+                                                            "assets/other/mayyith.jpg"),
                                                         fit: BoxFit.fill,
                                                       ),
                                                     ),
@@ -2477,7 +2494,7 @@ class _home_pageState extends State<home_page> {
 
               /// Search
               SalomonBottomBarItem(
-                icon: Image.asset('assets/counter_icon.png', scale: 1.1),
+                icon: Image.asset('assets/other/counter_icon.png', scale: 1.1),
                 title: const Text("Counter"),
                 selectedColor: Colors.orange,
               ),
@@ -2521,9 +2538,7 @@ class _FavViewState extends State<FavView> {
         body: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(
-                right: 320,top: 20
-              ),
+              padding: const EdgeInsets.only(right: 320, top: 20),
               child: Container(
                 height: 36,
                 width: 36,
@@ -2580,7 +2595,8 @@ class _FavViewState extends State<FavView> {
                                 leading: SizedBox(
                                     height: 50.0,
                                     width: 50.0, // fixed width and height
-                                    child: Image.asset("list.png")),
+                                    child:
+                                        Image.asset("assets/other/list.png")),
                                 title: Text(
                                   item.title,
                                   style: const TextStyle(
