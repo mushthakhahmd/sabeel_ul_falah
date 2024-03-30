@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class CounterView extends StatefulWidget {
@@ -37,7 +38,7 @@ class _counterState extends State<CounterView> {
           ),
         ),
         title: Text(
-          "Counter",
+          'counter'.tr(),
           style: TextStyle(color: Colors.black),
         ),
         elevation: .2,

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -135,7 +136,7 @@ class _home_pageState extends State<home_page> {
                                           decoration: InputDecoration(
                                             focusColor: Colors.blue,
                                             prefixIcon: Icon(Icons.search),
-                                            hintText: "Search by Title",
+                                            hintText: 'search_by_title'.tr(),
                                             hintStyle: TextStyle(
                                                 color: Colors.black45,
                                                 fontSize: 18),
@@ -157,7 +158,7 @@ class _home_pageState extends State<home_page> {
                             child: Row(
                               children: [
                                 Text(
-                                  "Categories",
+                                  'categories'.tr(),
                                   style: GoogleFonts.roboto(
                                       fontSize: 20,
                                       color: const Color(0xff3F414E),
@@ -2378,7 +2379,6 @@ class _home_pageState extends State<home_page> {
             ),
             const FavView(),
             CounterView(),
-            Container()
           ].elementAt(_currentIndex),
           bottomNavigationBar: SalomonBottomBar(
             currentIndex: _currentIndex,
@@ -2387,21 +2387,21 @@ class _home_pageState extends State<home_page> {
               /// Home
               SalomonBottomBarItem(
                 icon: const Icon(Icons.home),
-                title: const Text("Home"),
+                title: Text('home'.tr()),
                 selectedColor: Colors.purple,
               ),
 
               /// Likes
               SalomonBottomBarItem(
                 icon: const Icon(Icons.favorite_border),
-                title: const Text("Saved"),
+                title: Text('saved'.tr()),
                 selectedColor: Colors.pink,
               ),
 
               /// Search
               SalomonBottomBarItem(
                 icon: Image.asset('assets/other/counter_icon.png', scale: 1.1),
-                title: const Text("Counter"),
+                title: Text('counter'.tr()),
                 selectedColor: Colors.orange,
               ),
 

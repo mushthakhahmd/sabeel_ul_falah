@@ -1,8 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:provider/provider.dart';
 import 'package:sabeel/about_us.dart';
 import 'package:sabeel/home.dart';
+
 import 'package:sabeel/state/provider.dart';
 
 class DrawarWidget extends StatelessWidget {
@@ -44,7 +46,7 @@ class DrawarWidget extends StatelessWidget {
                   color: Color(0xff1D438A),
                 ),
                 title: Text(
-                  "About Us",
+                  'about_us'.tr(),
                   style: TextStyle(fontWeight: FontWeight.w500),
                 ),
                 onTap: () {
@@ -88,7 +90,7 @@ class DrawarWidget extends StatelessWidget {
                 color: Color(0xff1D438A),
               ),
               title: Text(
-                "Notifications",
+                'notification'.tr(),
                 style: TextStyle(fontWeight: FontWeight.w500),
               ),
             ),
@@ -101,20 +103,30 @@ class DrawarWidget extends StatelessWidget {
                 color: Color(0xff1D438A),
               ),
               title: Text(
-                "Share",
+                'share'.tr(),
                 style: TextStyle(fontWeight: FontWeight.w500),
               ),
             ),
             ListTile(
-              onTap: () {
-                languageProvider.changeLanguage(Locale('ml', 'IN'));
+              onTap: () async {
+                if (languageProvider.currentLocale.languageCode == 'en') {
+                  languageProvider.changeLanguage(Locale('ml', 'IN'));
+                  Phoenix.rebirth(context);
+                } else {
+                  // MyApp.of(context)
+                  //     .setLocale(Locale.fromSubtags(languageCode: 'en'));
+                  languageProvider.changeLanguage(Locale('en', 'US'));
+                  Phoenix.rebirth(context);
+                }
               },
               leading: Icon(
                 Icons.language,
                 color: Color(0xff1D438A),
               ),
               title: Text(
-                "Change to ML",
+                languageProvider.currentLocale.languageCode == 'ml'
+                    ? 'Change to EN'
+                    : "Change to ML",
                 style: TextStyle(fontWeight: FontWeight.w500),
               ),
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:provider/provider.dart';
 import 'package:sabeel/db/db_function.dart';
 import 'package:sabeel/splash.dart';
@@ -32,14 +33,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) => LanguageProvider(context),
-      child: MaterialApp(
-        title: 'sabeelulfalah',
-        localizationsDelegates: context.localizationDelegates,
-        supportedLocales: context.supportedLocales,
-        locale: context.locale,
-        theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: false),
-        home: const splash(),
+      child: Phoenix(
+        child: MaterialApp(
+          title: 'sabeelulfalah',
+          localizationsDelegates: context.localizationDelegates,
+          supportedLocales: context.supportedLocales,
+          locale: context.locale,
+          theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: false),
+          home: const splash(),
+        ),
       ),
     );
   }
+
+  static of(BuildContext context) {}
 }
