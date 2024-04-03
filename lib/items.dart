@@ -95,7 +95,7 @@ class _item_list_wakeupState extends State<item_list_wakeup> {
                                       color: Colors.black, fontSize: 16),
                                 ),
                                 subtitle: Text(
-                                  item.subTitle,
+                                  item.malayalamTitle,
                                   style: const TextStyle(
                                       color: Colors.black87, fontSize: 16),
                                 ),

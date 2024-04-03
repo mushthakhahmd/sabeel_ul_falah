@@ -1,5 +1,7 @@
 // ignore_for_file: invalid_use_of_protected_member, invalid_use_of_visible_for_testing_member
 
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:sabeel/model/item_model.dart';
 import 'package:sqflite/sqflite.dart';
@@ -11,14 +13,22 @@ late Database _db;
 
 Future<void> initializeDatabase() async {
 // open the database
-  _db = await openDatabase("items.db", version: 1,
-      onCreate: (Database db, int version) async {
-    // When creating the db, create the table
-    // Insert some records in a transaction
-    await db.execute(
-        'CREATE TABLE Items ( id  INTEGER, cat_id  INTEGER, title  TEXT, subTitle  TEXT, isFavorite  TEXT ,imgUrl  TEXT )');
-    //   await insertIntoTable();
-  });
+  _db = await openDatabase(
+    "items.db",
+    version: 1,
+    onCreate: (Database db, int version) async {
+      // When creating the db, create the table
+      // Insert some records in a transaction
+      await db.execute(
+          'CREATE TABLE Items ( id  INTEGER, cat_id  INTEGER, title  TEXT, subTitle  TEXT, isFavorite  TEXT ,imgUrl  TEXT )');
+      //   await insertIntoTable();
+    },
+    onUpgrade: (db, oldVersion, newVersion) async {
+      if (oldVersion < newVersion) {
+        await db.execute("ALTER TABLE Items ADD COLUMN malayalam_text TEXT;");
+      }
+    },
+  );
 }
 
 Future<void> getCount() async {
@@ -27,7 +37,14 @@ Future<void> getCount() async {
       Sqflite.firstIntValue(await _db.rawQuery('SELECT COUNT(*) FROM Items'));
   if (count! == 0) {
     insertIntoTable();
+  } else {
+    await updateData2();
   }
+}
+
+Future updateData2() async {
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഉണര് ന്നതിന് ശേഷം ദുവാ', 1]);
 }
 
 Future<void> insertIntoTable() async {
