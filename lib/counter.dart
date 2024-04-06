@@ -53,7 +53,7 @@ class _counterState extends State<CounterView> {
               child: Text(
                 _counter.toString(),
                 textAlign: TextAlign.center,
-                textScaleFactor: 3.5,
+                textScaleFactor: 10.5,
               ),
             ),
             Positioned(

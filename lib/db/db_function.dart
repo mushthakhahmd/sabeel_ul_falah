@@ -632,10 +632,10 @@ Future<void> insertIntoTable() async {
 
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(185,15, "Ashraqa Baith", "أشرق بيت", "false", "assets/pdf/15 Ashraqa Baith.pdf")');
+            '(327,15, "Ashraqa Baith", "أشرق بيت", "false", "assets/pdf/15 Ashraqa Baith.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(186,15, "Ya Akrama Baith", "يا أكرم بيت", "false", "assets/pdf/15 Ya Akrama Baith.pdf")');
+            '(328,15, "Ya Akrama Baith", "يا أكرم بيت", "false", "assets/pdf/15 Ya Akrama Baith.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(185,15, "Qaseedat-ul Burda", "قصيدة البردة", "false", "assets/pdf/15 Qaseedat-ul Burda of Imam Busweeri.pdf")');
@@ -1039,7 +1039,7 @@ Future<void> insertIntoTable() async {
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
             '(308,19, "To Increase in Returning", "يكثر في الرجوع إلى البلد", "false", "assets/pdf/21 29 To Increase in Returning __compressed.pdf")');
-  //start with 327
+  //start with 329
   });
 }
 
