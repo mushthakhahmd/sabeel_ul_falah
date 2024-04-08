@@ -43,7 +43,7 @@ Future<void> getCount() async {
 }
 
 Future updateData2() async {
-  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+  await _db.rawQuery('UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
       ['ഉണര് ന്നതിന് ശേഷം ദുവാ', 1]);
 }
 

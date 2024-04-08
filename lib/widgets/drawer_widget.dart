@@ -6,6 +6,7 @@ import 'package:sabeel/about_us.dart';
 import 'package:sabeel/home.dart';
 
 import 'package:sabeel/state/provider.dart';
+import 'package:share_plus/share_plus.dart';
 
 class DrawarWidget extends StatelessWidget {
   const DrawarWidget({
@@ -102,6 +103,11 @@ class DrawarWidget extends StatelessWidget {
                 Icons.share,
                 color: Color(0xff1D438A),
               ),
+              onTap: () {
+                Share.share(
+                    'https://play.google.com/store/apps/details?id=com.sabeel.falah',
+                    subject: 'Sabeel-ul Falah');
+              },
               title: Text(
                 'share'.tr(),
                 style: TextStyle(fontWeight: FontWeight.w500),
