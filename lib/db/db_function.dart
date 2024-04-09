@@ -42,11 +42,7 @@ Future<void> getCount() async {
   }
 }
 
-Future updateData2() async {
-  await _db.rawQuery('UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
-      ['ഉണര് ന്നതിന് ശേഷം ദുവാ', 1]);
-}
-
+Future updateData2() async {}
 Future<void> insertIntoTable() async {
   await _db.transaction((txn) async {
     await txn.rawInsert(
@@ -1068,9 +1064,10 @@ Future<void> getItems(int id) async {
       itemsNotifier.notifyListeners();
       searchItemsNotifier.add(items);
     }
-  } else {
+  }
+   else {
     final _values =
-        await _db.rawQuery(' SELECT * FROM Items  WHERE cat_id = ?', [id]);
+        await _db.rawQuery(' SELECT * FROM Items  WHERE cat_id = ?', ['id']);
     for (var item in _values) {
       final items = Items.fromJson(item);
       itemsNotifier.value.add(items);
@@ -1097,7 +1094,7 @@ Future<void> getFavItems() async {
   itemsNotifier.value.clear();
 
   final _values = await _db
-      .rawQuery(' SELECT * FROM Items  WHERE isFavorite = ?', ['true']);
+      .rawQuery(' SELECT * FROM Items  WHERE isFavorite = ?', [''true']);
 
   print(_values);
 
@@ -1113,7 +1110,7 @@ Future<void> getFavItems() async {
 
 Future<void> updateFavorite(int id, String value) async {
   await _db.rawQuery(
-      ' UPDATE Items SET  isFavorite =?  WHERE   id = ?', [value, id]);
+      ' UPDATE Items SET  isFavorite =?  WHERE   id = ?', ['value, id']);
 
   if (value == 'false') {
     getFavItems();
