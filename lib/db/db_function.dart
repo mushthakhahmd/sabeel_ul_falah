@@ -42,7 +42,657 @@ Future<void> getCount() async {
   }
 }
 
-Future updateData2() async {}
+Future updateData2() async {
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഉറക്കിൽ നിന്ന് എഴുന്നേറ്റാൽ ചൊല്ലേണ്ട ദുആ', 1]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ആലുഇംറാൻ അവസാന ആയത്തുകൾ', 2]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['തഹജ്ജുദിന് ശേഷമുള്ള ദുആ', 3]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അസ്മാഉൽ ഹുസ്നാ ദുആ', 4]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['തഹജ്ജുദ് സമയത്ത് ഇമാം ഹദ്ദാദ്(റ) ചൊല്ലിയ ബൈത്ത്', 5]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശൈഖ് അബൂബക്ർ സാലിം(റ) വിന്റെ വിർദ്', 6]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['തഹജ്ജുദിന് ശേഷമുള്ള ചില ദിക്റുകൾ', 7]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സുബ്ഹിയുടെ സുന്നത്തിൽ ഓതേണ്ടത്', 8]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വലത് ഭാഗത്തേക്ക് ചെരിഞ്ഞ് ചൊല്ലേണ്ടത്', 9]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സുബ്ഹിയുടെ സുന്നത്തിന് ശേഷമുള്ള ദിക്റ്', 10]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സുബ്ഹിയുടെ ശേഷമുള്ള ദുആഉൽ ഫജ്റ്', 11]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഇലൈക യാ റബ്ബി ബൈത്ത്', 12]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വിർദുല്ലത്വീഫ്', 13]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മുസബ്ബആത്ത്', 14]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സലാമതുൽ ഈമാൻ ദുആ', 15]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സ്വലാത്തുൽ ഹളൂർ', 16]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മരണപ്പെട്ടവർക്കൊരു ഫാതിഹയും ദുആയും', 17]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വിർദുന്നവവി', 18]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഉറക്കെ ഓതുന്ന നിസ്കാരങ്ങളിലെ സൂറത്തുകൾ', 19]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഫർള് നിസ്കാരങ്ങൾക്ക് ശേഷമുള്ള ദിക്റുകൾ', 20]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ളുഹാ നിസ്ക്കാരം', 21]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ളുഹാ നിസ്കാരത്തിന്റെ ശേഷമുള്ള ദിക്റും ദുആയും', 22]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ളുഹ്റിന് മുമ്പ് നാല് റക്അത്ത്', 23]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ളുഹ്റിന് ശേഷം നാല് റക്അത്ത്', 24]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ളുഹ്റിന്റെ സുന്നത്തിന് ശേഷമുള്ള ദിക്റും ദുആയും', 25]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഹിസ്ബ്ന്നസ്റ് (ഇമാം ഹദ്ദാദ്(റ))', 26]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഹിസ്ബുന്നസ്റ് (ഇമാം ശാദുലി (റ))', 27]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അസറിന്റെ മുമ്പ് നാല് റക്അത്ത്', 28]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഹിസ്ബുൽ ബഹ്റ് (ഇമാം ശാദുലി (റ))', 29]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സയ്യിദുൽ ഇസ്തിഖ്ഫാർ', 30]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അസ്തമയത്തിന് മുമ്പുള്ള ദിക്റുകൾ', 31]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മഹരിബ് നിസ്കാരത്തന്റെ സുന്നത്തുകൾ', 32]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['എല്ലാ ദിവസവുമുള്ള മയ്യത്ത് നിസ്കാരം', 33]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അവ്വാബീൻ നിസ്കാരം', 34]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സൈഫുൽ യമാനി ദുആ', 35]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഈമാൻ ഊട്ടിയുറപ്പിക്കാൻ ചൊല്ലേണ്ടത്', 36]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സൂറത്ത് യാസീൻ', 37]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['യാസീൻ സൂറത്തിന്റെ ദുആ', 38]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സൂറത്തുൽ വാഖിഅ', 39]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വാഖിഅ സൂറത്തിന്റെ ദുആ', 40]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സൂറത്തുസ്സജദ', 41]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സൂറത്തുൽ മുൽക്', 42]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സൂറതുദുഖാൻ', 43]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സൂറത്തുൽ ഹശ്റിലെ അവസാന ആയത്തുകൾ', 44]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഇശാഇന്റെ മുമ്പ് രണ്ട് റക്അത്ത്', 45]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഇശാഇന്റെ ശേഷം രണ്ട് റക്അത്ത്', 46]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഹദ്ദാദ് റാതീബ്', 47]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['റാതിബുൽ അത്ത്വാസ്', 48]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വിത്റ് നിസ്ക്കാരം', 49]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വിത്റ് നിസാകര ശേഷമുള്ള ദിക്റ്', 50]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വലിയ ഖുനൂത്', 51]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഉറങ്ങുന്നതിന് മുമ്പ് ചൊല്ലേണ്ടത്', 52]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['പതിവായി ചെയ്യേണ്ട കാര്യങ്ങൾ', 53]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അസ്മാഉന്നബി (സ്വ)', 144]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അസ്മാഉൽ ബദ്റ്', 310]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['പൊതുവായ ദുആ', 309]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഏത് രോഗത്തിനുമുളള മന്ത്രം', 102]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വെള്ളിയാഴ്ചയിലെ വിർദുകൾ', 54]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഇലാഹീ നസ്അലുക ബൈത്ത്', 55]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഖദ് കഫാനീ ബൈത്ത്', 56]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സൂറത്തുൽ കഹ്ഫ്', 57]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ജുമുഅക്ക് ശേഷം 7 പ്രാവശ്യം', 58]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ജീവിതം സന്തോഷമാവാൻ', 326]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഇലാഹീ ലസ്തു ബൈത്ത്', 59]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['നൂറ് തസ്ബീഹ്', 60]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['കടം വീടാൻ 70 പ്രാവശ്യം', 61]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ജുമുഅ ദിവസം അസറിന് ശേഷം ചൊല്ലേണ്ട സ്വലാത്ത്', 62]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വെള്ളം കുടിച്ച ശേഷം', 63]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഭക്ഷണം കഴിച്ച ശേഷം', 64]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['നിസ്കാരത്തിൽ നിന്ന് ഒന്നാം സലാം വീട്ടിയ ശേഷം', 65]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['നിസ്കാരത്തലിൽ നിന്ന് രണ്ടൺാം സലാം വീട്ടിയ ശേഷം', 66]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['തുമ്മിയ ശേഷം', 67]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഉറക്കിൽ നിന്ന് ഉണർന്നാൽ', 68]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മനോഹരം ചെയ്ത ശേഷം', 69]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['പുതിയ വസ്ത്രത്തിൽ മന്ത്രിക്കേണ്ടത്', 71]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വുളൂഇന്റെ ശേഷമുള്ള ദുആ', 72]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വധുവരന്മാർക്കുളള ആശംസ', 73]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ആദ്യ രാത്രിയിലെ നിസ്കാരശേഷമുള്ള ദുആ', 74]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സദസ്സ് പിരിയും മുമ്പ് ചൊല്ലേണ്ട ദുആ', 75]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ക്ലാസുകളുടെയും വായനയുടേയും തുടക്കത്തിലെ ദുആ', 76]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വാങ്കിന്റേയും ഇഖാമത്തിന്റേയും ഇടയിലുള്ള ദുആ', 77]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['തൗബ നിസ്കാരത്തിന്റെ ദുആ', 78]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വീട് എളുപ്പമായിക്കിട്ടാനുള്ള ദുആ', 79]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഇണചേർന്ന് മനിയ്യ് പുറപ്പെടുമ്പോൾ കരുതേണ്ടത്', 80]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഭാര്യയെ ആദ്യമായി കണ്ട്മുട്ടുമ്പോൾ ചൊല്ലുക', 81]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഗർഭിണിയായാൽ ചെയ്യേണ്ടത്', 82]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഇണചേരും മുമ്പ് ചൊല്ലുക', 83]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സുബ്ഹ് വാങ്കിന് ശേഷം പ്രത്യേകമായി ചൊല്ലുക', 84]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മഹ്‌രിബ് വാങ്കിന് ശേഷം പ്രത്യേകമായി ചൊല്ലുക', 85]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സുബ്ഹ് വാങ്കിൽ പ്രത്യേകമായി', 86]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['കുട്ടിക്ക് പേര് വിളിക്കേണ്ട രൂപം', 87]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['പുതിയ വീട്ടിൽ ഫാത്തിഹ വിളിക്കേണ്ട രൂപം', 88]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അത്ഭുപ്പെടുത്തുന്ന കാഴ്ച കണ്ടാൽ', 89]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['കുഴിയിൽ വീണാൽ', 90]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['കടം വീടൽ പ്രയാസമായാൽ', 91]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ലക്ഷ്യപൂർത്തീകരണം പ്രയാസമായാൽ', 92]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മുഅ്മിനിന്റെ മരണവാർത്ത കേട്ടാൽ', 93]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വിപത്തിൽ അകപ്പെട്ടാൽ', 94]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഇഖാമത്തിൽ ചൊല്ലേണ്ടത്', 95]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['എല്ലാ നല്ലകാര്യത്തിന്റെയും തുടക്കത്തിൽ ചൊല്ലുക', 96]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഇസ്തികാറത്ത്‌ നിസ്കാരവും ദുആയും', 97]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['എല്ലാ മാസവും ആവർത്തിക്കുന്ന നഹ്സ് ദിനങ്ങൾ', 98]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഓരോ മാസത്തിലെയും നഹ്സ് ദിനങ്ങൾ', 99]);
+  await _db.rawQuery(
+      ' UPDATE Items SET  malayalam_text =?  WHERE   id = ?', ['മആശിറ', 325]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['നികാഹിന്റെ ഖുത്വുബ', 100]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['പഠിക്കുമ്പോഴും പഠിപ്പിക്കുമ്പോഴും കരുതേണ്ട നിയ്യത്ത്', 101]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശിഫയുടെ ആയത്തുകൾ', 103]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['തിലാവതിന്റെ സുജൂദ്', 104]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['തസ്ബീഹ് നിസ്കാരം', 105]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['തൗബ നിസ്കാരം', 106]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['കുഞ്ഞ് പിറന്നാൽ മന്ത്രിക്കേണ്ടത്', 107]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['പ്രസവം എളുപ്പമാവാൻ', 108]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശുക്റിന്റെ സുജൂദ്', 109]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['പുതിയ വീട്ടിൽ ഓതേണ്ടത്', 110]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സ്വാലിഹീങ്ങളിൽ ഉൾപ്പെടാനുള്ള ദുആ', 111]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['പുതിയ വസ്ത്രം ധരിച്ചവനോട് പറയുക', 112]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഭാര്യ, മക്കളിൽ ആഗ്രഹിച്ചത് കാണാൻ', 113]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['താടി ചീകുമ്പോൾ', 114]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['കുളിപ്പുരയിൽ പ്രവേശിക്കുമ്പോൾ', 115]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വീട്ടിൽ പ്രവേശിക്കുമ്പോൾ', 116]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['പളളിയിൽ പ്രവേശിക്കുമ്പോൾ', 117]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഒഴിഞ്ഞ സ്ഥലത്ത് പ്രവേശിക്കുമ്പോൾ', 118]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഗർഭിണി ചർദി കൊണ്ട് പ്രയാസമായാൽ', 119]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വാങ്കിന്റെ ശേഷമുള്ള പ്രാർത്ഥനകൾ', 120]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ദേഷ്യം വന്നാൽ', 121]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['പള്ളിയിലേക്ക് പോവുമ്പോഴുള്ള പ്രാർഥന', 122]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വാങ്കിന് ഉത്തരം ചെയ്യേണ്ടൺ വിധം', 123]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മഴ പെയ്യുമ്പോൾ', 124]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വീട്ടിൽ നിന്ന് പുറപ്പെടുമ്പോൾ', 125]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ആകാശത്തേക്ക് നോക്കുമ്പോൾ', 126]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['കണ്ണാടിയിലേക്ക് നോക്കുമ്പോൾ', 127]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['പള്ളിയിൽ നിന്ന് പുറപ്പെടുമ്പോൾ', 128]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വിസർജ്യ സ്ഥലത്ത് നിന്ന് പുറപ്പെടുമ്പോൾ', 129]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മാസം കാണുമ്പോൾ', 130]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വസ്ത്രം ഊരുമ്പോൾ', 131]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അത്തർ മണക്കുമ്പോൾ', 132]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['രോഗിയെ സന്ദർശിക്കുമ്പോൾ', 133]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വസ്ത്രം ധരിക്കുമ്പോൾ', 134]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ദാനം ചെയ്യുന്ന സമയത്ത്', 135]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['പാല് കുടിക്കുമ്പോൾ', 136]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സംസം വെള്ളം കുടിക്കുമ്പോൾ', 137]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വിസർജ്യ സ്ഥലത്ത് പ്രവേശിക്കുമ്പോൾ', 138]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['പ്രയാസമനുഭവിക്കുമ്പോൾ', 139]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['കടം വീട്ടുമ്പോൾ', 140]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഹസ്തദാനം ചെയ്യുമ്പോൾ', 141]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഇടിവെട്ടുമ്പോൾ', 142]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['കോട്ടുവായ ഇടുമ്പോൾ', 143]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ദലാഇല്ലുൽ ആരംഭിക്കുന്നതിന് മുമ്പ് ചൊല്ലുക', 145]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['തിങ്കളാഴ്ചയിലെ ഹിസ്ബ്', 146]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ചൊവ്വാഴ്ചയിലെ ഹിസ്ബ്', 147]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ബുധനാഴ്ചയിലെ ഹിസ്ബ്', 148]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വ്യാഴ്ചയിലെ ഹിസ്ബ്', 149]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വെള്ളിയാഴ്ചയിലെ ഹിസ്ബ്', 150]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശനിയാഴ്ചയിലെ ഹിസ്ബ്', 151]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഞായറാഴ്ചയിലെ ഹിസ്ബ്', 152]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ദലാഇലിന് ശേഷമുള്ള ദുആയും ബൈതും', 153]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഇബ്നു ഹജർ തങ്ങളുടെ സ്വലാത്ത്', 154]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശഫാഅത്തിന് കാരണമാവുന്ന സ്വലാത്ത്', 155]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['നബിതങ്ങളെ സ്വപ്നത്തിൽ കാണാനുള്ള സ്വലാത്ത്', 156]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ആവശ്യപൂർത്തീകരണത്തിനുള്ള സ്വലാത്ത്', 157]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഇമാം ശാഫി (റ) വിന്റെ സ്വലാത്ത്', 158]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശൈഖ് ജീലാനി (റ) വിന്റെ സ്വലാത്ത്', 159]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശൈഖ് രിഫാഈ (റ) വിന്റെ സ്വലാത്ത്', 160]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശൈഖ് ബദവീ (റ) വിന്റെ സ്വലാത്ത്', 161]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശൈഖ് ദസൂഖീ (റ) വിന്റെ സ്വലാത്ത്', 162]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഇമാം ഗസ്സാലി (റ) വിന്റെ സ്വലാത്ത്', 163]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശൈഖ് ഇബ്നു അറബി (റ) വിന്റെ സ്വലാത്ത്', 164]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മശീശിയ്യ സ്വലാത്ത്', 165]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശൈഖ് ശാദുലീ (റ) വിന്റെ സ്വലാത്ത്', 166]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഇമാം നവവീ (റ) വിന്റെ സ്വലാത്ത്', 167]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സ്വലാത്തുൽ ഫാതിഹ്', 168]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സ്വലാത്തുൽ ഇൻആം', 169]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സ്വലാത്തുൽ ആലിൽ ഖദ്റ്', 170]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സ്വലാത്തുൽ കമാലിയ്യ', 171]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['നാരിയ്യത്തുസ്വലാത്ത്', 172]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സ്വലാത്തുൽ മുൻജിയ്യ', 173]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശൈഖ് അലിയ്യുൽ ഹബ്ശി (റ) വിന്റെ സ്വലാത്ത്', 174]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഇമാം ഹദ്ദാദ് (റ) വിന്റെ സ്വലാത്ത്', 175]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['താജു സ്വലാത്ത്', 176]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സ്വലാത്തു ത്വിബ്ബ്', 177]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശൈഖ് ഉമർ ഹഫീസ് തങ്ങളുടെ ചില സ്വലാത്തുകൾ', 337]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശൈഖ് അബൂബക്ർ സാലിം (റ) വിന്റെ സ്വലാത്ത്', 338]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മിഫ്താഹുൽ ഖൈറാത്ത്', 205]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ബശാഇറുൽ ഖൈറാത്ത്', 324]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സലാം ബൈത്', 178]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശറഫൽ അനാം മൗലിദ്', 179]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മൻഖൂസ് മൗലിദ്', 180]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ബർസൻജി മൗലിദ്', 181]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ബദ്ർ മൗലിദ്', 182]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മുഹിയുദ്ദീൻ മൗലിദ്', 183]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അംലദുൽ ഗുസ്നൈൻ മൗലിദ്', 184]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അശ്റഖ ബൈത്ത്', 327]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['യാ അക്റമ ബൈത്ത്', 328]);
+  await _db.rawQuery(
+      ' UPDATE Items SET  malayalam_text =?  WHERE   id = ?', ['ബുർദ', 185]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മുളരിയ്യ', 186]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മുഹമ്മദിയ്യ', 187]);
+  await _db.rawQuery(
+      ' UPDATE Items SET  malayalam_text =?  WHERE   id = ?', ['വിതരിയ', 188]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സ്വല്ലൽ ഇലാഹു ബൈത്ത് (ഉമർ ഖാസി (റ))', 189]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അഹമദുല്ലാഹൽ വലീ ബൈത്ത്', 190]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['റൗളയിൽ എഴുതപ്പെട്ട ബൈത്ത്', 191]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഖദീജ ബീവി തവസ്സുൽ ബൈത്ത്', 192]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഫാത്തിമാ ബീവി തവസ്സുൽ ബൈത്ത്', 193]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മറിയം ബീവി തവസ്സുൽ ബൈത്ത്', 194]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഖുത്ബിയ്യത്ത്', 195]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മഹ്ളറത്തുൽ ബദ്രിയ്യ', 196]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['തഅ്ജീലുൽ ഫുതൂഹ്', 197]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മുഹ്‌യിദ്ധീൻ മാല', 198]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഖംരിയ്യ ബൈത്ത്', 322]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ദഫ്ഉൽ ബലാഅ് ബൈത്ത് (ശൈഖ് ജിഫ്രി (റ))', 200]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അജ്മീർ തവസ്സുൽ ബൈത്ത്', 201]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സുൽത്താനുൽ ഹിന്ദ് മദ്ഹ് ബൈത്ത്', 202]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സി എം വലിയുല്ലാഹി തവസ്സുൽ ബൈത്ത്', 203]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ആരംഭപൂവായ ബൈത്ത്', 204]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ആദി അവ്വൽ ബൈത്ത്', 312]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ആദി അമൈത്തെ ബൈത്ത്', 313]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ബദ്രീങ്ങളെ തവസ്സുലാക്കിയുള്ള ബൈത്ത്', 314]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മക്കത്തുദിത്ത ബൈത്ത്', 315]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അബ്ജദ് ബൈത്ത്', 316]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അഖ്സാം ബൈത്ത്', 317]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സി എം വലിയുല്ലാഹി തവസ്സുൽ ബൈത്ത് 2', 318]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ആമിന ബീവി തവസ്സുൽ ബൈത്ത്', 319]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ആഇശ ബീവി തവസ്സുൽ ബൈത്ത്', 320]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മജ്ലിസ്, ക്ലാസ് തുടങ്ങിയവയുടെ ഒടുവിൽ ചൊല്ലേണ്ട ബൈത്ത്', 70]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വർഷാവസാനത്തിൽ ചൊല്ലേണ്ട ദുആ', 206]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വർഷാദ്യത്തിൽ ചൊല്ലേണ്ട ദുആ', 207]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വർഷാദ്യത്തിലെ മറ്റൊരു ദുആ', 208]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മുഹറം ആദ്യ പത്തിൽ ചൊല്ലേണ്ടത്', 209]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['113 ബിസ്മി എഴുതൽ', 210]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['360 ആയതുൽ കുർസി  ഓതൽ', 211]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ജീവികളുടെ ശല്യങ്ങളിൽ നിന്ന് വീടിന് കാവലുണ്ടവാൻ', 212]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ആശൂറാ നാളിലെ ദുആ', 213]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ആശൂറാ നാളിൽ 70 വട്ടം', 214]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ആശൂറാ നാളിൽ 360 വട്ടം', 215]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ആശൂറാ നാളിൽ 1000 വട്ടം', 216]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സൂറത്തുൽ ഇഖ്ലാസ് 1000 ഓതിയ ശേഷമുള്ള പ്രാർഥന', 217]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ആശൂറാ നാളിലെ മറ്റൊരു ദുആ', 218]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സ്വഫർ ആദ്യ ദിനത്തിലും ഒടുവിലത്തെ ബുധനിലും', 219]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['റജബ് ആദ്യ രാവിലെ ദുആ', 220]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഇമാം ഹദ്ദാദ് (റ) വിന്റെ റജബിലെ ഇസ്തിഗാഫാർ', 221]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['റജബിലെ മഗ്രിബിനും സുബ്ഹിക്കും ശേഷം 70 വട്ടം', 222]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['റജബിലെ നബി (സ്വ) തങ്ങളുടെ ദുആ', 223]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['റജബ് എല്ലാ രാവിലും ചൊല്ലേണ്ടൺ ഇസ്തിഗ്ഫാർ', 224]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശഅ്ബാൻ 15 വരെ ദുഖാൻ ആദ്യ 8 ആയതുകൾ', 225]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശഅ്ബാൻ 14 അസറിന് യാസീൻ ഓതിയ ശേഷം ദുആ', 226]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ശഅ്ബാൻ 15 ന്റെ രാവിൽ യാസീൻ ഓതിയ ശേഷം ദുആ', 227]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ദുഖാൻ സൂറത്ത് ഓതിയ ശേഷമുള്ള ദുആ', 228]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ബറാഅത്ത് രാവിലെ മറ്റൊരു ദുആ', 229]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ദാരിദ്യത്തിൽ നിന്ന് മോചനം ലഭിക്കാനുള്ള ദുആ', 230]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ബറാഅത്ത് രാവിൽ 70 വട്ടം', 231]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ബറാഅത്ത് രാവിൽ 100 വട്ടം', 232]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ബറാഅത്ത് രാവിൽ ശൈഖ് ജീലാനി (റ) വിന്റെ ദുആ', 233]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ബറാഅത്ത് രാവിൽ ഇമാം ഹദ്ദാദ് (റ) വിന്റെ ദുആകൾ', 234]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഖുർആൻ ഖത്മ് ചെയ്തശേഷമുള്ള ദുആ', 235]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ലൈലതുൽ ഖദ്റിന്റെ രാവുകളിൽ അധികരിപ്പിക്കേണ്ടൺ ദുആ', 236]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['റമളാൻ മൂന്ന് പത്തിലും അധികരിപ്പിക്കേണ്ട ദുആ', 237]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഒന്നാം പത്തിൽ', 238]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['രണ്ടാം  പത്തിൽ', 239]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മൂന്നാം പത്തിൽ', 240]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['റമളാൻ നോമ്പിന്റെ നിയ്യത്ത്', 241]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['നോമ്പ് തുറന്നയുടനെ ചൊല്ലേണ്ടത്', 242]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['തറാവീഹ് നിസ്കാരത്തിന്റെ നിയ്യത്ത്', 243]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['തറാവീഹിന് ശേഷമുള്ള ദുആ', 244]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['തറാവീഹിന് ശേഷമുള്ള മറ്റൊരു ദുആ', 245]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['തറാവീഹിന് ശേഷം ഇമാം അത്വാസ് (റ) വിന്റെ ദുആ', 246]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ലൈലതുൽ ഖദ്റിന്റെ രാവുകളിലെ ദുആ', 247]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഒന്നാം പത്തിൽ ചൊല്ലേണ്ട ബൈത്ത്', 248]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['രണ്ടാം പത്തിൽ ചൊല്ലേൺണ്ട ബൈത്ത്', 249]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മൂന്നാം പത്തിൽ ചൊല്ലേണ്ട ബൈത്ത്', 250]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മാതാപിതാക്കൾക്ക് വേണ്ടിയുള്ള പ്രത്യേക ദുആ', 251]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ദുൽഹിജ്ജ ആദ്യ പത്തുദിനങ്ങളിൽ ചൊല്ലേണ്ട ദിക്റ്', 252]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ദുൽഹിജ്ജ ആദ്യപത്തിൽ ചെയ്യേണ്ട ദുആ', 253]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['രണ്ട് പെരുന്നാൾ നിസ്കാരങ്ങൾക്ക് മുമ്പും 400 തവണ', 254]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ചെറിയ പെരുന്നാൾ നിസ്കാരത്തിന്റെ നിയ്യത്ത്', 255]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ബലിപെരുന്നാൾ നിസ്കാരത്തിന്റെ നിയ്യത്ത്', 256]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['പെരുന്നാൾ നിസ്കാരത്തിന്റെ രൂപം', 257]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['തക്ബീറിന്റെ പൂർണ രൂപം', 258]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സുന്നത്ത് നോമ്പിന്റെ ദിനങ്ങൾ', 259]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സുന്നത്ത് നോമ്പുകളുടെ നിയ്യത്തുകൾ', 260]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അഞ്ച് പുണ്യ രാവുകൾ', 323]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['യാത്രയുടെ മുമ്പുള്ള നിസ്കാരവും ദുആയും', 261]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['യാത്ര തുടങ്ങുമ്പോൾ', 262]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വാഹനം നീങ്ങിത്തുടങ്ങിയാൽ', 263]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വിമാനം, കപ്പൽ യാത്രികർ പ്രത്യേകമായി ചൊല്ലുക', 264]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വീട്ടിലേക്ക് തിരിച്ചെത്തുമ്പോൾ', 265]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മയ്യിത്തിന് ആശ്വാസം ലഭിക്കാൻ രണ്ട് റക്അത്ത്', 266]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അതാഖതു സ്സുഖ്റയും കുബ്റയും', 267]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['കഫൻപുടവയിൽ മന്ത്രിച്ച മണ്ണ് വെക്കൽ', 268]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മയ്യിത്ത് നിസ്കാരം', 269]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മയ്യിത്തിനെ ഖബറിൽ വെക്കുമ്പോൾ ചൊല്ലേണ്ടത്', 270]);
+  await _db.rawQuery(
+      ' UPDATE Items SET  malayalam_text =?  WHERE   id = ?', ['തസ്ബീത്', 271]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['തഅ്സിയതിന്റെ സന്ദർഭത്തിൽ പറയേണ്ടത്', 272]);
+  await _db.rawQuery(
+      ' UPDATE Items SET  malayalam_text =?  WHERE   id = ?', ['തൽഖീൻ', 273]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഖബ്റിസ്ഥാനിൽ പ്രവേശിക്കുമ്പോൾ', 274]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഖബ്റിലേക്ക് മണ്ണിടുമ്പോൾ പറയേണ്ടത്', 275]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഖബറിന്റെ മുകളിൽ വെള്ളമൊഴിക്കുമ്പോൾ', 276]);
+  await _db.rawQuery(
+      ' UPDATE Items SET  malayalam_text =?  WHERE   id = ?', ['ഇഹ്റാം', 280]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മക്കയിലേക്ക് പ്രവേശിക്കുമ്പോൾ ചൊല്ലുക', 281]);
+  await _db.rawQuery(
+      ' UPDATE Items SET  malayalam_text =?  WHERE   id = ?', ['ത്വവാഫ്', 282]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മുൽതസമിലെ ദുആ', 283]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മഖാമു ഇബ്റാഹീമിലെ ദുആ', 284]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഹിജ്റ് ഇസ്മാഇൗലിലെ ദുആ', 285]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സംസം കുടിക്കുമ്പോൾ ചൊല്ലുക', 286]);
+  await _db.rawQuery(
+      ' UPDATE Items SET  malayalam_text =?  WHERE   id = ?', ['സഹീയ്', 287]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മുടികളയുന്നതിന് മുമ്പ് ചൊല്ലുക', 288]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മിനയിലേക്ക് പുറപ്പെടുമ്പോൾ', 289]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അറഫയിലെ ദിക്റുകൾ', 290]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മുസ്ദലിഫയിലും മസ്ജിദുൽ ഹറാമിലും', 291]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മിനയിൽ രണ്ടാം പ്രാവശ്യം എത്തുമ്പോൾ ചൊല്ലുക', 292]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ജംറത്തുൽ അഖബയിൽ', 293]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['വിടവാങ്ങൽ ത്വവാഫ്', 294]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മദീനയിലേക്ക് പ്രവേശിക്കുമ്പോൾ ചൊല്ലുക', 295]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['മസ്ജിദുന്നബവിയിലേക്ക് പ്രവേശിക്കുമ്പോൾ', 296]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['റൗളയിൽ തഹിയ്യത്ത് നിസ്കരിച്ച ശേഷം ചൊല്ലേണ്ടത്', 297]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['നബി (സ്വ) തങ്ങൾക്ക് സലാം ചൊല്ലേണ്ട രൂപം', 298]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['അബൂബക്ർ (റ) വിന് സലാം ചൊല്ലേണ്ട രൂപം', 299]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഉമർ (റ) വിന് സലാം ചൊല്ലേണ്ട രൂപം', 300]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['സലാം ചൊല്ലിയ ശേഷമുള്ള ദുആ', 301]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ജന്നതുൽ ബഖീഇൽ ഉള്ളവർക്ക് സലാം ചൊല്ലേണ്ട രൂപം', 302]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഉസ്മാൻ (റ) വിന് സലാം ചൊല്ലേണ്ട രൂപം', 303]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['നബി (സ്വ) യുടെ മക്കൾക്കും മുഅ്മിനീങ്ങൾക്കുമുള്ള സലാം', 304]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['നബി (സ്വ) യുടെ ഭാര്യമാർക്കുള്ള സലാം', 305]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['നബി (സ്വ) യുടെ പെൺമക്കൾക്കുള്ള സലാം', 306]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഉഹ്ദ് ശുഹദാക്കളോട് സലാം പറയേണ്ട രൂപം', 307]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['നാട്ടിലേക്ക് മടങ്ങുമ്പോൾ അധികരിപ്പിക്കുക', 308]);
+}
+
 Future<void> insertIntoTable() async {
   await _db.transaction((txn) async {
     await txn.rawInsert(
@@ -1064,10 +1714,9 @@ Future<void> getItems(int id) async {
       itemsNotifier.notifyListeners();
       searchItemsNotifier.add(items);
     }
-  }
-   else {
+  } else {
     final _values =
-        await _db.rawQuery(' SELECT * FROM Items  WHERE cat_id = ?', ['id']);
+        await _db.rawQuery(' SELECT * FROM Items  WHERE cat_id = ?', [id]);
     for (var item in _values) {
       final items = Items.fromJson(item);
       itemsNotifier.value.add(items);
@@ -1094,7 +1743,7 @@ Future<void> getFavItems() async {
   itemsNotifier.value.clear();
 
   final _values = await _db
-      .rawQuery(' SELECT * FROM Items  WHERE isFavorite = ?', [''true']);
+      .rawQuery(' SELECT * FROM Items  WHERE isFavorite = ?', ['true']);
 
   print(_values);
 
@@ -1110,7 +1759,7 @@ Future<void> getFavItems() async {
 
 Future<void> updateFavorite(int id, String value) async {
   await _db.rawQuery(
-      ' UPDATE Items SET  isFavorite =?  WHERE   id = ?', ['value, id']);
+      ' UPDATE Items SET  isFavorite =?  WHERE   id = ?', [value, id]);
 
   if (value == 'false') {
     getFavItems();
