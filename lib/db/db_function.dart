@@ -15,12 +15,12 @@ Future<void> initializeDatabase() async {
 // open the database
   _db = await openDatabase(
     "items.db",
-    version: 1,
+    version: 2,
     onCreate: (Database db, int version) async {
       // When creating the db, create the table
       // Insert some records in a transaction
       await db.execute(
-          'CREATE TABLE Items ( id  INTEGER, cat_id  INTEGER, title  TEXT, subTitle  TEXT, isFavorite  TEXT ,imgUrl  TEXT )');
+          'CREATE TABLE Items ( id  INTEGER, cat_id  INTEGER, title  TEXT, subTitle  TEXT, isFavorite  TEXT ,imgUrl  TEXT , malayalam_text TEXT)');
       //   await insertIntoTable();
     },
     onUpgrade: (db, oldVersion, newVersion) async {
@@ -36,8 +36,8 @@ Future<void> getCount() async {
   final count =
       Sqflite.firstIntValue(await _db.rawQuery('SELECT COUNT(*) FROM Items'));
   if (count! == 0) {
-    insertIntoTable();
-  } else {
+    await insertIntoTable();
+
     await updateData2();
   }
 }

@@ -1,4 +1,4 @@
-package com.example.sabeel_ul_falah
+package com.sabeel.falah
 
 import io.flutter.embedding.android.FlutterActivity
 
