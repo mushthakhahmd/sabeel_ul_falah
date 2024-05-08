@@ -691,6 +691,10 @@ Future updateData2() async {
       ['ഉഹ്ദ് ശുഹദാക്കളോട് സലാം പറയേണ്ട രൂപം', 307]);
   await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
       ['നാട്ടിലേക്ക് മടങ്ങുമ്പോൾ അധികരിപ്പിക്കുക', 308]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ബദ്ർ തവസ്സുൽ ബൈത്', 327]);
+  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+      ['ഉഹ്ദ് തവസ്സുൽ ബൈത്', 328]);
 }
 
 Future<void> insertIntoTable() async {
@@ -898,7 +902,7 @@ Future<void> insertIntoTable() async {
         '(58,11, "Recite Seven Times After Jumua", "يقرأ بعد صلاة الجمعة سبعا", "false", "assets/pdf/11 Recite Seven Times After Jumua.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-        '(326,11, "Zikr for Ease of Livelihood", "سبعون مرة لقضاء الدين", "false", "assets/pdf/11 Seventy Times of Livelihood.pdf")');
+        '(326,11, "Zikr for Ease of Livelihood", "سبعة مرة لتسهيل الرزق", "false", "assets/pdf/11 Seventy Times of Livelihood.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(59,11, "Qaseeda For Strengthening Faith", "إلهي لست للفردوس", "false", "assets/pdf/11 Qaseeda For Strengthening Faith.pdf")');
@@ -907,7 +911,7 @@ Future<void> insertIntoTable() async {
         '(60,11, "100 Thasbeeh after Jumua", "التسبيح", "false", "assets/pdf/11 100 Thasbeeh after Jumua.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-        '(61,11, "Seven Times To Get rid of Debt", "سبعة مرة لتسهيل الرزق", "false", "assets/pdf/11 To Get rid of Debt.pdf")');
+        '(61,11, "Seven Times To Get rid of Debt", "سبعون مرة لقضاء الدين", "false", "assets/pdf/11 To Get rid of Debt.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(62,11, "Swalath After Friday Asar", "الصلوات بعد عصر يوم الجمعة", "false", "assets/pdf/11 Swalath After Friday Asar.pdf")');
@@ -1257,10 +1261,10 @@ Future<void> insertIntoTable() async {
         '(177,13, "Swalath-ul Thwibb", "صلاة الطب", "false","assets/pdf/13 Swalat-ul Twibb.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-        '(337,13, "Swalat of Habeeb Umer Bin Hafeez", "بعض الصلوات للحبيب عمر", "false", "assets/pdf/13 swalath mifthahul khairat compressed.pdf")');
+        '(337,13, "Swalat of Habeeb Umer Bin Hafeez", "بعض الصلوات للحبيب عمر", "false", "assets/pdf/13 Some Forms of Swalat of Habeeb Umer Bin Hafeez.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-        '(338,13, "Swalat of Sheikh Abu Backer Bin Salim", "بعض الصلوات للشيخ أبو بكر بن سالم", "false", "assets/pdf/13 swalath mifthahul khairat compressed.pdf")');
+        '(338,13, "Swalat of Sheikh Abu Backer Bin Salim", "بعض الصلوات للشيخ أبو بكر بن سالم", "false", "assets/pdf/13 Another Swalat of Sheikh Abu Backer Bin Salim.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(205,13, "Mifthaul  Hairath", "مفتاح الخيرات", "false", "assets/pdf/13 swalath mifthahul khairat compressed.pdf")');
@@ -1389,6 +1393,12 @@ Future<void> insertIntoTable() async {
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(320,15, "Sayyidatuna Ayisha Tawassul", "سيدتنا عائشة توسل بيت", "false", "assets/pdf/15 Sayyidatuna Ayisha Tawassul.pdf")');
+    await txn.rawInsert(
+        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
+            '(327,15, "Badr Tawassul Baith -1", "التوسل بأهل بدر ", "false", "assets/pdf/15 ashabul badr.pdf")');
+    await txn.rawInsert(
+        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
+            '(328,15, "Uhd Thawassul Baith", "التوسل بأهل أحد", "false", "assets/pdf/15 uhd tawassil.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(70,15, "Baith and Ayath at the End of Majlis and Class", "القصيدة التي تقرأ في آخر المجالس", "false", "assets/pdf/12 Baith at the End of Majlis.pdf")');
@@ -1699,7 +1709,7 @@ Future<void> insertIntoTable() async {
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(308,19, "To Increase in Returning", "يكثر في الرجوع إلى البلد", "false", "assets/pdf/21 29 To Increase in Returning __compressed.pdf")');
-    //start with 327
+    //start with 329
   });
 }
 
