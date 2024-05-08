@@ -113,29 +113,29 @@ class DrawarWidget extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.w500),
               ),
             ),
-            ListTile(
-              onTap: () async {
-                if (languageProvider.currentLocale.languageCode == 'en') {
-                  languageProvider.changeLanguage(Locale('ml', 'IN'));
-                  Phoenix.rebirth(context);
-                } else {
-                  // MyApp.of(context)
-                  //     .setLocale(Locale.fromSubtags(languageCode: 'en'));
-                  languageProvider.changeLanguage(Locale('en', 'US'));
-                  Phoenix.rebirth(context);
-                }
-              },
-              leading: Icon(
-                Icons.language,
-                color: Color(0xff1D438A),
-              ),
-              title: Text(
-                languageProvider.currentLocale.languageCode == 'ml'
-                    ? 'Change to EN'
-                    : "Change to ML",
-                style: TextStyle(fontWeight: FontWeight.w500),
-              ),
-            ),
+            // ListTile(
+            //   onTap: () async {
+            //     if (languageProvider.currentLocale.languageCode == 'en') {
+            //       languageProvider.changeLanguage(Locale('ml', 'IN'));
+            //       Phoenix.rebirth(context);
+            //     } else {
+            //       // MyApp.of(context)
+            //       //     .setLocale(Locale.fromSubtags(languageCode: 'en'));
+            //       languageProvider.changeLanguage(Locale('en', 'US'));
+            //       Phoenix.rebirth(context);
+            //     }
+            //   },
+            //   leading: Icon(
+            //     Icons.language,
+            //     color: Color(0xff1D438A),
+            //   ),
+            //   title: Text(
+            //     languageProvider.currentLocale.languageCode == 'ml'
+            //         ? 'Change to EN'
+            //         : "Change to ML",
+            //     style: TextStyle(fontWeight: FontWeight.w500),
+            //   ),
+            // ),
           ],
         ),
       ),

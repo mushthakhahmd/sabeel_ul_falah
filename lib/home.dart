@@ -2,11 +2,14 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:provider/provider.dart';
 import 'package:sabeel/constant.dart';
 import 'package:sabeel/counter.dart';
 import 'package:sabeel/db/db_function.dart';
 import 'package:sabeel/model/item_model.dart';
+import 'package:sabeel/state/provider.dart';
 import 'package:sabeel/views/pdf_view.dart';
 import 'package:sabeel/widgets/drawer_widget.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
@@ -25,6 +28,7 @@ class _home_pageState extends State<home_page> {
 
   @override
   Widget build(BuildContext context) {
+    final languageProvider = Provider.of<LanguageProvider>(context);
     DateTime? clickTime;
     // ignore: deprecated_member_use
     return WillPopScope(
@@ -94,6 +98,42 @@ class _home_pageState extends State<home_page> {
                     ),
                   ),
                   systemOverlayStyle: SystemUiOverlayStyle.light,
+                  actions: [
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: () async {
+                            if (languageProvider.currentLocale.languageCode ==
+                                'en') {
+                              languageProvider
+                                  .changeLanguage(Locale('ml', 'IN'));
+                              Phoenix.rebirth(context);
+                            } else {
+                              // MyApp.of(context)
+                              //     .setLocale(Locale.fromSubtags(languageCode: 'en'));
+                              languageProvider
+                                  .changeLanguage(Locale('en', 'US'));
+                              Phoenix.rebirth(context);
+                            }
+                          },
+                          icon: Icon(
+                            Icons.language,
+                            color: Color(0xff1D438A),
+                          ),
+                        ),
+                        Text(
+                          languageProvider.currentLocale.languageCode == 'ml'
+                              ? 'ML'
+                              : "EN",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, color: Colors.black),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      width: 20,
+                    )
+                  ],
                 ),
                 SliverList(
                     delegate: SliverChildListDelegate(

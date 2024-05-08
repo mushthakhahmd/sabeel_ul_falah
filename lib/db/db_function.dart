@@ -902,7 +902,7 @@ Future<void> insertIntoTable() async {
         '(58,11, "Recite Seven Times After Jumua", "يقرأ بعد صلاة الجمعة سبعا", "false", "assets/pdf/11 Recite Seven Times After Jumua.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-        '(326,11, "Zikr for Ease of Livelihood", "سبعة مرة لتسهيل الرزق", "false", "assets/pdf/11 Seventy Times of Livelihood.pdf")');
+        '(326,11, "Zikr for Ease of Livelihood", "سبعون مرة لقضاء الدين", "false", "assets/pdf/11 Seventy Times of Livelihood.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(59,11, "Qaseeda For Strengthening Faith", "إلهي لست للفردوس", "false", "assets/pdf/11 Qaseeda For Strengthening Faith.pdf")');
@@ -911,7 +911,7 @@ Future<void> insertIntoTable() async {
         '(60,11, "100 Thasbeeh after Jumua", "التسبيح", "false", "assets/pdf/11 100 Thasbeeh after Jumua.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-        '(61,11, "Seven Times To Get rid of Debt", "سبعون مرة لقضاء الدين", "false", "assets/pdf/11 To Get rid of Debt.pdf")');
+        '(61,11, "Seventy Times To Get rid of Debt", "سبعة مرة لتسهيل الرزق", "false", "assets/pdf/11 To Get rid of Debt.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(62,11, "Swalath After Friday Asar", "الصلوات بعد عصر يوم الجمعة", "false", "assets/pdf/11 Swalath After Friday Asar.pdf")');
@@ -1308,13 +1308,19 @@ Future<void> insertIntoTable() async {
         '(185,15, "Qaseedat-ul Burda", "قصيدة البردة", "false", "assets/pdf/15 Qaseedat-ul Burda of Imam Busweeri.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-        '(186,15, "Qaseedat-ul Mulariyya", "القصيدة المضرية", "false", "assets/pdf/15 Qaseedat-ul Mulariyya of Imam Busweeri.pdf")');
+        '(186,15, "Qaseedat-ul Mulariyya", "القصيدة المضرية", "false", "assets/pdf/15 Qaseedat-ul_ _Mulariyya of Imam Busweeri.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(187,15, "Qaseedath-ul Muhammadiyya", "القصيدة المحمدية", "false", "assets/pdf/15 Qaseedath-ul Muhammadiyya.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(188,15, "Qaseedat-ul Witriyya", "قصائد الوترية", "false", "assets/pdf/15 Qaseedat-ul Witriyya.pdf")');
+    await txn.rawInsert(
+        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
+            '(316,15, "Abjad Baith", "أبجد بيت", "false", "assets/pdf/15 Abjad Baith")');
+    await txn.rawInsert(
+        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
+            '(317,15, "Aqsam baith", "أقسام بيت", "false", "assets/pdf/15 Aqsam Baith")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(189,15, "Qaseeda Swallal Ilah", "قصيدة صلى الإله", "false", "assets/pdf/15 Qaseeda Swallal Ilah of Sheikh.pdf")');
@@ -1378,12 +1384,6 @@ Future<void> insertIntoTable() async {
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(315,15, "Makkathuditha Baith", "مكتدت بيت ", "false", "assets/pdf/15 Makkathuditha Baith.pdf")');
-    await txn.rawInsert(
-        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-        '(316,15, "Abjad Baith", "أبجد بيت", "false", "assets/pdf/15 Abjad Baith")');
-    await txn.rawInsert(
-        'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-        '(317,15, "Aqsam baith", "أقسام بيت", "false", "assets/pdf/15 Aqsam Baith")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(318,15, "C.M Waliyyullah Tawassul Baith 2", "سي ام ولي الله بيت ", "false", "assets/pdf/15 C.M Waliyyullah_ _Tawassul_ _Baith 2.pdf")');
