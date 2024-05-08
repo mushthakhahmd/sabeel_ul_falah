@@ -425,10 +425,10 @@ Future updateData2() async {
       ['മുഹിയുദ്ദീൻ മൗലിദ്', 183]);
   await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
       ['അംലദുൽ ഗുസ്നൈൻ മൗലിദ്', 184]);
-  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
-      ['അശ്റഖ ബൈത്ത്', 327]);
-  await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
-      ['യാ അക്റമ ബൈത്ത്', 328]);
+  // await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+  //     ['അശ്റഖ ബൈത്ത്', 327]);
+  // await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
+  //     ['യാ അക്റമ ബൈത്ത്', 328]);
   await _db.rawQuery(
       ' UPDATE Items SET  malayalam_text =?  WHERE   id = ?', ['ബുർദ', 185]);
   await _db.rawQuery(' UPDATE Items SET  malayalam_text =?  WHERE   id = ?',
@@ -1317,10 +1317,10 @@ Future<void> insertIntoTable() async {
         '(188,15, "Qaseedat-ul Witriyya", "قصائد الوترية", "false", "assets/pdf/15 Qaseedat-ul Witriyya.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(316,15, "Abjad Baith", "أبجد بيت", "false", "assets/pdf/15 Abjad Baith")');
+        '(316,15, "Abjad Baith", "أبجد بيت", "false", "assets/pdf/15 Abjad Baith")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(317,15, "Aqsam baith", "أقسام بيت", "false", "assets/pdf/15 Aqsam Baith")');
+        '(317,15, "Aqsam baith", "أقسام بيت", "false", "assets/pdf/15 Aqsam Baith")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(189,15, "Qaseeda Swallal Ilah", "قصيدة صلى الإله", "false", "assets/pdf/15 Qaseeda Swallal Ilah of Sheikh.pdf")');
@@ -1395,10 +1395,10 @@ Future<void> insertIntoTable() async {
         '(320,15, "Sayyidatuna Ayisha Tawassul", "سيدتنا عائشة توسل بيت", "false", "assets/pdf/15 Sayyidatuna Ayisha Tawassul.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(327,15, "Badr Tawassul Baith -1", "التوسل بأهل بدر ", "false", "assets/pdf/15 ashabul badr.pdf")');
+        '(327,15, "Badr Tawassul Baith -1", "التوسل بأهل بدر ", "false", "assets/pdf/15 ashabul badr.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
-            '(328,15, "Uhd Thawassul Baith", "التوسل بأهل أحد", "false", "assets/pdf/15 uhd tawassil.pdf")');
+        '(328,15, "Uhd Thawassul Baith", "التوسل بأهل أحد", "false", "assets/pdf/15 uhd tawassil.pdf")');
     await txn.rawInsert(
         'INSERT INTO Items(id,cat_id, title, subTitle,isFavorite, imgUrl) VALUES'
         '(70,15, "Baith and Ayath at the End of Majlis and Class", "القصيدة التي تقرأ في آخر المجالس", "false", "assets/pdf/12 Baith at the End of Majlis.pdf")');
@@ -1738,13 +1738,21 @@ Future<void> getItems(int id) async {
 
 void search2(String value) {
   itemsNotifier.value.clear();
+  itemsNotifier.notifyListeners();
   if (value.isEmpty) {
     itemsNotifier.value.addAll(searchItemsNotifier);
   } else {
-    itemsNotifier.value = searchItemsNotifier
-        .where((element) =>
-            element.title.toLowerCase().contains(value.toLowerCase()))
-        .toList();
+    searchItemsNotifier.forEach((userDetail) {
+      if (userDetail.title.toLowerCase().contains(value.toLowerCase()) ||
+          userDetail.subTitle.toLowerCase().contains(value.toLowerCase()))
+        itemsNotifier.value.add(userDetail);
+    });
+
+    // itemsNotifier.value = searchItemsNotifier
+    //     .where((element) =>
+    //         element.title.toLowerCase().contains(value.toLowerCase()))
+    //     .toList();
+
     itemsNotifier.notifyListeners();
   }
 }
