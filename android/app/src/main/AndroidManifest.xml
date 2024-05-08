@@ -2,6 +2,8 @@
     package="com.sabeel.falah">
    <application
         android:label="sabeel_ul_falah"
+        android:allowBackup="false"
+        android:fullBackupOnly="false"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
